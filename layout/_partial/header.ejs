@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="alternate" href="atom.xml" type="application/atom+xml">
+  <link rel="icon" href="/favicon.png">
+  <%- css('css/main.css') %>
+</head>
+<body>
+<header>
+  <div class="wrapper">
+    <a href="<%- url_for() %>" class="site-title">site-title</a>
+    <% if (theme.menu) { %>
+    <ul class="nav">
+      <% for (var i in theme.menu) { %>
+      <li>
+        <a href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+      </li>
+      <% } %>
+    </ul>
+    <% } %>
+  </div>
+</header>

@@ -1,0 +1,27 @@
+<section class="main index">
+  <div class="wrapper">
+    <h2>Posts</h2>
+    <ul class="post-list">
+      <% page.posts.each(function (post) { %>
+      <li class="post-item">
+        <span class="post-meta"><%- date(post.date, 'MMM D YYYY') %></span>
+        <h2 class="post-title">
+          <% if (post.link) { %>
+            <a href="<%- url_for(post.link) %>" target="_blank"><%= post.title %></a>
+          <% } else { %>
+            <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+          <% } %>
+        </h2>
+      </li>
+      <% }) %>
+    </ul>
+    <% console.log(page.total, page.per_page) %>
+
+    <div class="paginator">
+      <%- paginator({
+      prev_text: '&laquo; Prev',
+      next_text: 'Next &raquo;'
+    }) %>
+    </div>
+  </div>
+</section>
