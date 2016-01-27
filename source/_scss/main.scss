@@ -3,6 +3,15 @@
 @import "highlight";
 @import "extra";
 
+body {
+  font-family: $font_base;
+}
+
+code, pre {
+  font-family: $font_mono;
+  font-size: 0.8em;
+}
+
 header {
   border-bottom: 1px solid #e8e8e8;
   height: 50px;
@@ -13,9 +22,11 @@ header {
     width: $main-width;
   }
   .site-title {
-    font-size: 1.8em;
     color: #ecf0f1; //cloud
     text-decoration: none;
+    code {
+      font-size: 25px;
+    }
     &:hover {
       color: #10ff04;
       text-decoration: none;
