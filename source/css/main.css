@@ -476,6 +476,14 @@ header {
   .main .wrapper {
     margin: 0 auto;
     width: 800px; }
+    .main .wrapper h2 {
+      color: #2c3e50; }
+      .main .wrapper h2 a {
+        text-decoration: none; }
+        .main .wrapper h2 a:visited {
+          color: #2c3e50; }
+        .main .wrapper h2 a:hover {
+          color: #e74c3c; }
   .main .post-list {
     list-style: none;
     margin: 0;

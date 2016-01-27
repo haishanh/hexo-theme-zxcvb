@@ -49,6 +49,18 @@ header {
   .wrapper {
     margin: 0 auto;
     width: $main-width;
+    h2 {
+      color: #2c3e50;
+      a {
+        text-decoration: none;
+        &:visited {
+          color: #2c3e50;
+        }
+        &:hover {
+          color: #e74c3c;
+        }
+      }
+    }
   }
   .post-list {
     list-style: none;
