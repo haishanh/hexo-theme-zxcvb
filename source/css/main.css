@@ -506,7 +506,7 @@ header {
       color: #777;
       font-size: 0.8em; }
     .main .wrapper .post-title {
-      margin: 3px auto;
+      margin: 15px auto 5px;
       color: #2980b9;
       font-weight: 300; }
       .main .wrapper .post-title a {
