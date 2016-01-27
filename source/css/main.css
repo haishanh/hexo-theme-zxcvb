@@ -439,6 +439,13 @@ th {
   border-radius: 3px;
   box-shadow: inset 0 -1px 0 #bbb; }
 
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
 body {
   font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif; }
 
@@ -451,9 +458,13 @@ header {
   height: 50px;
   background: #333;
   background: rgba(0, 0, 0, 0.8); }
-  header .wrapper {
-    margin: 0 auto;
-    width: 800px; }
+  @media (min-width: 901px) {
+    header .wrapper {
+      margin: 0 auto;
+      width: 800px; } }
+  @media (max-width: 900px) {
+    header .wrapper {
+      margin: 0 15px 0; } }
   header .site-title {
     color: #ecf0f1;
     text-decoration: none;
@@ -485,36 +496,40 @@ header {
  */
 .main {
   border-bottom: 1px solid #e8e8e8; }
-  .main .wrapper {
-    margin: 0 auto;
-    width: 800px; }
-    .main .wrapper h2 {
-      color: #2c3e50; }
-      .main .wrapper h2 a {
-        text-decoration: none; }
-        .main .wrapper h2 a:visited {
-          color: #2c3e50; }
-        .main .wrapper h2 a:hover {
-          color: #e74c3c; }
-    .main .wrapper .post-list {
-      list-style: none;
-      margin: 0;
-      padding: 0; }
-      .main .wrapper .post-list .post-item {
-        margin: 15px auto; }
-    .main .wrapper .post-meta {
-      color: #777;
-      font-size: 0.8em; }
-    .main .wrapper .post-title {
-      margin: 15px auto 5px;
-      color: #2980b9;
-      font-weight: 300; }
-      .main .wrapper .post-title a {
-        text-decoration: none; }
-        .main .wrapper .post-title a:link, .main .wrapper .post-title a:visited {
-          color: #2980b9; }
-        .main .wrapper .post-title a:hover {
-          color: #e74c3c; }
+  @media (min-width: 901px) {
+    .main .wrapper {
+      margin: 0 auto;
+      width: 800px; } }
+  @media (max-width: 900px) {
+    .main .wrapper {
+      margin: 0 15px 0; } }
+  .main .wrapper h2 {
+    color: #2c3e50; }
+    .main .wrapper h2 a {
+      text-decoration: none; }
+      .main .wrapper h2 a:visited {
+        color: #2c3e50; }
+      .main .wrapper h2 a:hover {
+        color: #e74c3c; }
+  .main .wrapper .post-list {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .main .wrapper .post-list .post-item {
+      margin: 15px auto; }
+  .main .wrapper .post-meta {
+    color: #777;
+    font-size: 0.8em; }
+  .main .wrapper .post-title {
+    margin: 15px auto 5px;
+    color: #2980b9;
+    font-weight: 200; }
+    .main .wrapper .post-title a {
+      text-decoration: none; }
+      .main .wrapper .post-title a:link, .main .wrapper .post-title a:visited {
+        color: #2980b9; }
+      .main .wrapper .post-title a:hover {
+        color: #e74c3c; }
 
 .post .post-title {
   margin-top: 15px; }
@@ -543,6 +558,7 @@ header {
 
 /* paginator */
 .paginator {
+  margin: 0 auto;
   padding: 5px;
   text-align: center; }
   .paginator a {
@@ -561,6 +577,11 @@ header {
     float: left; }
 
 footer {
-  width: 800px;
   margin: 0 auto;
   color: #777; }
+  @media (min-width: 901px) {
+    footer {
+      width: 800px; } }
+  @media (max-width: 900px) {
+    footer {
+      width: 90%; } }

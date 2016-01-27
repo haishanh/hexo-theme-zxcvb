@@ -1,7 +1,17 @@
 @import "var";
+@import "include-media";
+@import "mixins";
 @import "normalize";
 @import "highlight";
 @import "extra";
+
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
 
 body {
   font-family: $font_base;
@@ -18,8 +28,13 @@ header {
   background: #333;
   background: rgba(0,0,0,0.8);
   .wrapper {
-    margin: 0 auto;
-    width: $main-width;
+    @include media(">900px") {
+      margin: 0 auto;
+      width: $main-width;
+    }
+    @include media("<=900px") {
+      margin: 0 15px 0;
+    }
   }
   .site-title {
     color: #ecf0f1; //cloud
@@ -62,8 +77,13 @@ header {
 .main {
   border-bottom: 1px solid #e8e8e8;
   .wrapper {
-    margin: 0 auto;
-    width: $main-width;
+    @include media(">900px") {
+      margin: 0 auto;
+      width: 800px;
+    }
+    @include media("<=900px") {
+      margin: 0 15px 0;
+    }
     h2 {
       color: #2c3e50;
       a {
@@ -91,7 +111,7 @@ header {
     .post-title {
       margin: 15px auto 5px;
       color: #2980b9;
-      font-weight: 300;
+      font-weight: 200;
       a {
         text-decoration: none;
         &:link, &:visited {
@@ -103,6 +123,7 @@ header {
       }
     }
   }
+
 }
 
 .post {
@@ -144,6 +165,7 @@ header {
 
 /* paginator */
 .paginator {
+  margin: 0 auto;
   padding: 5px;
   text-align: center;
   a {
@@ -171,7 +193,12 @@ header {
 }
 
 footer {
-  width: $main-width;
+  @include media (">900px") {
+    width: $main-width;
+  }
+  @include media ("<=900px") {
+    width: 90%;
+  }
   margin: 0 auto;
   color: #777;
 }
