@@ -441,13 +441,15 @@ th {
 
 header {
   border-bottom: 1px solid #e8e8e8;
-  height: 50px; }
+  height: 50px;
+  background: #333;
+  background: rgba(0, 0, 0, 0.8); }
   header .wrapper {
     margin: 0 auto;
     width: 800px; }
   header .site-title {
     font-size: 1.8em;
-    color: black;
+    color: #ecf0f1;
     text-decoration: none; }
     header .site-title:hover {
       color: #10ff04;
@@ -484,23 +486,25 @@ header {
           color: #2c3e50; }
         .main .wrapper h2 a:hover {
           color: #e74c3c; }
-  .main .post-list {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    .main .post-list .post-item {
-      margin: 15px auto; }
-  .main .post-meta {
-    color: #777;
-    font-size: 0.8em; }
-  .main .post-title {
-    margin: 3px auto;
-    color: #2980b9;
-    font-weight: 300; }
-    .main .post-title a {
-      text-decoration: none; }
-      .main .post-title a:hover {
-        color: #e74c3c; }
+    .main .wrapper .post-list {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .main .wrapper .post-list .post-item {
+        margin: 15px auto; }
+    .main .wrapper .post-meta {
+      color: #777;
+      font-size: 0.8em; }
+    .main .wrapper .post-title {
+      margin: 3px auto;
+      color: #2980b9;
+      font-weight: 300; }
+      .main .wrapper .post-title a {
+        text-decoration: none; }
+        .main .wrapper .post-title a:link, .main .wrapper .post-title a:visited {
+          color: #2980b9; }
+        .main .wrapper .post-title a:hover {
+          color: #e74c3c; }
 
 .post .post-title {
   margin-top: 15px; }

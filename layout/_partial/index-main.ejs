@@ -9,7 +9,11 @@
           <% if (post.link) { %>
             <a href="<%- url_for(post.link) %>" target="_blank"><%= post.title %></a>
           <% } else { %>
-            <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+            <% if (post.title) { %>
+              <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+            <% } else { %>
+              <a href="<%- url_for(post.path) %>">No Title</a>
+            <% } %>
           <% } %>
         </h2>
       </li>
