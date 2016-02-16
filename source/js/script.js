@@ -35,4 +35,6 @@
       next && next.classList.contains('stop') && next.classList.remove('stop');
     }
   }
+
+  updateNav();
 }(document, window))
