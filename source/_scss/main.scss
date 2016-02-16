@@ -77,11 +77,11 @@ header {
   border-bottom: 1px solid #e8e8e8;
   .wrapper {
     @include media(">900px") {
-      margin: 0 auto;
+      margin: 0 auto 25px;
       width: 800px;
     }
     @include media("<=900px") {
-      margin: 0 15px 0;
+      margin: 0 15px 25px;
     }
     h2 {
       color: #2c3e50;
@@ -162,6 +162,46 @@ header {
   }
 }
 
+.post-nav {
+  position: relative;
+  height: 20px;
+  a {
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-size: 0.8em;
+    font-weight: 200;
+    color: #555;
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 0.4;
+    }
+    // nav icon
+    .icon {
+      height: 24px;
+      width: 24px;
+      margin-bottom: -7px;
+      fill: #555;
+    }
+  }
+  .nav {
+    position: absolute;
+    @include media(">1100px") {
+      position: fixed;
+    }
+    &.stop {
+      position: absolute;
+    }
+  }
+  .prev {
+    left: 20px;
+    bottom: 20px;
+  }
+  .next {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
 .post-footer {
   margin: 40px auto;
   text-align: center;
@@ -182,7 +222,6 @@ header {
 }
 
 #disqus_thread {
-  display: none;
 }
 
 /* paginator */

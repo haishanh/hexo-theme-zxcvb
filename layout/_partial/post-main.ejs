@@ -1,6 +1,6 @@
 <% var post = page %>
 <section class="main post">
-  <div class="wrapper">
+  <div class="wrapper clearfix">
   <h2 class="post-title">
     <% if (post.link) { %>
       <a href="<%- url_for(post.link) %>" target="_blank"><%= post.title %></a>
@@ -10,7 +10,7 @@
   </h2>
   <span class="post-meta"><%- date(post.date, 'MMM D YYYY') %></span>
   <%- post.content %>
-  <%- partial('post-footer') -%>
   <%- partial('disqus') -%>
   </div>
+  <%- partial('post-nav') -%>
 </section>

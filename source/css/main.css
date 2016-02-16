@@ -498,11 +498,11 @@ header {
   border-bottom: 1px solid #e8e8e8; }
   @media (min-width: 901px) {
     .main .wrapper {
-      margin: 0 auto;
+      margin: 0 auto 25px;
       width: 800px; } }
   @media (max-width: 900px) {
     .main .wrapper {
-      margin: 0 15px 0; } }
+      margin: 0 15px 25px; } }
   .main .wrapper h2 {
     color: #2c3e50; }
     .main .wrapper h2 a {
@@ -556,6 +556,37 @@ header {
     .post blockquote footer cite:before {
       content: " - "; }
 
+.post-nav {
+  position: relative;
+  height: 20px; }
+  .post-nav a {
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-size: 0.8em;
+    font-weight: 200;
+    color: #555;
+    transition: opacity 0.5s ease; }
+    .post-nav a:hover {
+      opacity: 0.4; }
+    .post-nav a .icon {
+      height: 24px;
+      width: 24px;
+      margin-bottom: -7px;
+      fill: #555; }
+  .post-nav .nav {
+    position: absolute; }
+    @media (min-width: 1101px) {
+      .post-nav .nav {
+        position: fixed; } }
+    .post-nav .nav.stop {
+      position: absolute; }
+  .post-nav .prev {
+    left: 20px;
+    bottom: 20px; }
+  .post-nav .next {
+    right: 20px;
+    bottom: 20px; }
+
 .post-footer {
   margin: 40px auto;
   text-align: center; }
@@ -570,9 +601,6 @@ header {
     .post-footer a:hover {
       color: #3498db;
       border: 1px solid #3498db; }
-
-#disqus_thread {
-  display: none; }
 
 /* paginator */
 .paginator {
