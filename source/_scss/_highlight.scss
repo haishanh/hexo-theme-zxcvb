@@ -11,6 +11,9 @@
   color: #333333;
   overflow-x: auto;
   margin: 0;
+  .gutter {
+    text-align: right;
+  }
   .gutter pre {
     color: #777;
   }

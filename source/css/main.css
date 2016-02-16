@@ -379,6 +379,8 @@ th {
   color: #333333;
   overflow-x: auto;
   margin: 0; }
+  .highlight .gutter {
+    text-align: right; }
   .highlight .gutter pre {
     color: #777; }
   .highlight .code pre {
@@ -487,15 +489,20 @@ header {
       padding: 5px; }
       header .nav li a {
         text-decoration: none;
-        color: #2980b9; }
+        color: #eee; }
         header .nav li a:hover {
-          color: #80C8F9; }
+          color: #999; }
 
 /**
  * main
  */
 .main {
   border-bottom: 1px solid #e8e8e8; }
+  .main code {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #eee;
+    padding: 1px 2px; }
   @media (min-width: 901px) {
     .main .wrapper {
       margin: 0 auto 25px;
