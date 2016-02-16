@@ -4,4 +4,7 @@ menu:
   Archives: /archives
   RSS: /atom.xml
 
+# show posts nav button at post footer
+post_nav: true
+
 description: You should place your <strong>description</strong> of your site here

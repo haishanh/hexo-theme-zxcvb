@@ -556,6 +556,24 @@ header {
     .post blockquote footer cite:before {
       content: " - "; }
 
+.post-footer {
+  margin: 40px auto;
+  text-align: center; }
+  .post-footer a {
+    text-decoration: none;
+    color: #999;
+    border: 1px solid #fff;
+    border-color: transparent;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px; }
+    .post-footer a:hover {
+      color: #3498db;
+      border: 1px solid #3498db; }
+
+#disqus_thread {
+  display: none; }
+
 /* paginator */
 .paginator {
   margin: 0 auto;
