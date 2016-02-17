@@ -76,10 +76,18 @@ header {
 .main {
   border-bottom: 1px solid #e8e8e8;
   code {
-    border: 1px solid #ddd;
     border-radius: 3px;
     background: #eee;
-    padding: 1px 2px;
+    padding: 0.2em 0;
+    margin: 0;
+    font-size: 85%;
+    &:before, &:after {
+      content: "\00a0";
+      letter-spacing: -0.2em;
+    }
+  }
+  p {
+    line-height: 1.6em;
   }
   .wrapper {
     @include media(">900px") {
