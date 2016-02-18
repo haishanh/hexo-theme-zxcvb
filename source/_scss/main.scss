@@ -77,7 +77,7 @@ header {
   border-bottom: 1px solid #e8e8e8;
   code {
     border-radius: 3px;
-    background: #eee;
+    background: #f1f1f1;
     padding: 0.2em 0;
     margin: 0;
     font-size: 85%;
@@ -236,6 +236,9 @@ header {
 }
 
 #disqus_thread {
+  @include media("<=900px") {
+    display: none;
+  }
 }
 
 /* paginator */
@@ -276,4 +279,23 @@ footer {
   }
   margin: 0 auto;
   color: #777;
+}
+
+.highlight {
+  .gutter {
+    & pre {
+      color: #777;
+    }
+    text-align: right;
+  }
+  .code {
+    & pre {
+      margin-left: 5px;
+      padding-left: 10px;
+      border-left: 2px solid #aaa;
+    }
+  }
+  margin: 0;
+  padding: 0.5em;
+  background: #f5f5f5;
 }

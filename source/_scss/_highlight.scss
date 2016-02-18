@@ -5,23 +5,7 @@
 
 
 .highlight {
-  display: block;
-  background: white;
-  padding: 0.5em;
-  color: #333333;
-  overflow-x: auto;
-  margin: 0;
-  .gutter {
-    text-align: right;
-  }
-  .gutter pre {
-    color: #777;
-  }
   .code pre {
-    margin-left: 5px;
-    padding-left: 5px;
-    border-left: 1px solid #ccc;
-
     /* style */
     .comment,
     .meta {
