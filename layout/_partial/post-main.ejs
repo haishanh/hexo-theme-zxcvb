@@ -1,14 +1,16 @@
 <% var post = page %>
 <section class="main post">
   <div class="wrapper clearfix">
-  <h2 class="post-title">
-    <% if (post.link) { %>
-      <a href="<%- url_for(post.link) %>" target="_blank"><%= post.title %></a>
-    <% } else { %>
-      <a href="<%- url_for(post.path) %>"><%= post.title %></a>
-    <% } %>
-  </h2>
-  <span class="post-meta"><%- date(post.date, 'MMM D YYYY') %></span>
+  <div class="post-header">
+    <h2 class="post-title">
+      <% if (post.link) { %>
+        <a href="<%- url_for(post.link) %>" target="_blank"><%= post.title %></a>
+      <% } else { %>
+        <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+      <% } %>
+    </h2>
+    <span class="post-meta"><%- date(post.date, 'MMM D, YYYY') %></span>
+  </div>
   <%- post.content %>
   <%- partial('disqus') -%>
   </div>

@@ -5,10 +5,10 @@
 
   // POSTS NAV POSITION
   var nav = $('.post-nav');
-  var navTop = nav.getBoundingClientRect().top;
   var navUpdateTicking = false;
 
   if (nav) {
+    var navTop = nav.getBoundingClientRect().top;
     w.addEventListener('scroll', function (e) {
       navTop = nav.getBoundingClientRect().top
       requestTick();

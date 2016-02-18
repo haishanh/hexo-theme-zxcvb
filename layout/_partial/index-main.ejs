@@ -4,7 +4,7 @@
     <ul class="post-list">
       <% page.posts.each(function (post) { %>
       <li class="post-item">
-        <span class="post-meta"><%- date(post.date, 'MMM D YYYY') %></span>
+        <span class="post-meta"><%- date(post.date, 'MMM D, YYYY') %></span>
         <h2 class="post-title">
           <% if (post.link) { %>
             <a href="<%- url_for(post.link) %>" target="_blank"><%= post.title %></a>
@@ -21,9 +21,10 @@
     </ul>
     <div class="paginator">
       <%- paginator({
-      prev_text: '&laquo; Prev',
-      next_text: 'Next &raquo;'
-    }) %>
+        base: theme.root,
+        prev_text: '&laquo; Prev',
+        next_text: 'Next &raquo;'
+      }) %>
     </div>
   </div>
 </section>
