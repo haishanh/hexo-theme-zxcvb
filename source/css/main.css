@@ -449,7 +449,7 @@ header {
   @media (min-width: 901px) {
     header .wrapper {
       margin: 0 auto;
-      width: 800px; } }
+      width: 700px; } }
   @media (max-width: 900px) {
     header .wrapper {
       margin: 0 15px 0; } }
@@ -634,7 +634,7 @@ footer {
   color: #777; }
   @media (min-width: 901px) {
     footer {
-      width: 800px; } }
+      width: 700px; } }
   @media (max-width: 900px) {
     footer {
       width: 90%; } }
