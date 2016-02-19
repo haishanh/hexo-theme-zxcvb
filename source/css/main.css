@@ -438,7 +438,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif; }
 
 code, pre {
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-family: Consolas, Monaco, Menlo, Consolas, "Courier New", monospace;
   font-size: 0.8em; }
 
 header {
@@ -520,7 +520,7 @@ header {
     color: #777;
     font-size: 0.8em; }
   .main .wrapper .post-title {
-    margin: 15px auto 5px;
+    margin: 10px auto 5px;
     color: #2980b9;
     font-weight: 200; }
     .main .wrapper .post-title a {
@@ -529,6 +529,10 @@ header {
         color: #2980b9; }
       .main .wrapper .post-title a:hover {
         color: #e74c3c; }
+
+.post .post-header {
+  text-align: center;
+  margin: 1.5em auto; }
 
 .post .post-title {
   margin-top: 15px; }

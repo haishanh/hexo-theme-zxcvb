@@ -122,7 +122,7 @@ header {
       font-size: 0.8em;
     }
     .post-title {
-      margin: 15px auto 5px;
+      margin: 10px auto 5px;
       color: #2980b9;
       font-weight: 200;
       a {
@@ -140,6 +140,11 @@ header {
 }
 
 .post {
+  .post-header {
+    text-align: center;
+    margin: 1.5em auto;
+  }
+
   .post-title {
     margin-top: 15px;
     a {

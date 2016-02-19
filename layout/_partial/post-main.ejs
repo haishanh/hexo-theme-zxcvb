@@ -9,7 +9,7 @@
         <a href="<%- url_for(post.path) %>"><%= post.title %></a>
       <% } %>
     </h1>
-    <span class="post-meta"><%- date(post.date, 'MMM D, YYYY') %></span>
+    <span class="post-meta"><%- date(post.date, 'MMMM D, YYYY') %></span>
   </div>
   <%- post.content %>
   <%- partial('disqus') -%>
