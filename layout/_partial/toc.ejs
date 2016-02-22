@@ -1,0 +1,6 @@
+<% if (theme.enable_toc) { %>
+<div class="side toc">
+  <div class="toc-title">In this post</div>
+  <%- toc(page.content, {class: 'toc', list_number: false}) %>
+</div>
+<% } %>

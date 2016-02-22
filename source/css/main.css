@@ -427,12 +427,37 @@ th {
   border-radius: 3px;
   box-shadow: inset 0 -1px 0 #bbb; }
 
-.toc {
-  list-style: none; }
-  .toc li {
-    margin-bottom: 7px 0; }
-  .toc a {
-    text-decoration: none; }
+.side.toc {
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px; }
+  @media (min-width: 1001px) {
+    .side.toc {
+      float: left; } }
+  @media (max-width: 999px) {
+    .side.toc {
+      display: none; } }
+  .side.toc .toc-title {
+    margin-top: 10px;
+    font-size: 20px; }
+  .side.toc .toc {
+    padding-left: 0; }
+  .side.toc ol {
+    list-style: none;
+    padding-left: 20px; }
+  .side.toc li {
+    margin: 6px 0; }
+    .side.toc li.active {
+      font-weight: bold; }
+  .side.toc a {
+    text-decoration: none;
+    color: #3498db; }
+
+@media (min-width: 1001px) {
+  .content {
+    float: right;
+    width: 700px; } }
 
 .clearfix:after {
   content: ".";
@@ -453,10 +478,10 @@ header {
   height: 50px;
   background: #333;
   background: rgba(0, 0, 0, 0.8); }
-  @media (min-width: 901px) {
+  @media (min-width: 1001px) {
     header .wrapper {
       margin: 0 auto;
-      width: 700px; } }
+      width: 1000px; } }
   @media (max-width: 900px) {
     header .wrapper {
       margin: 0 15px 0; } }
@@ -502,11 +527,11 @@ header {
       letter-spacing: -0.2em; }
   .main p {
     line-height: 1.6em; }
-  @media (min-width: 901px) {
+  @media (min-width: 1001px) {
     .main .wrapper {
       margin: 0 auto 25px;
-      width: 700px; } }
-  @media (max-width: 900px) {
+      width: 1000px; } }
+  @media (max-width: 1000px) {
     .main .wrapper {
       margin: 0 15px 25px; } }
   .main .wrapper h2 {
@@ -528,12 +553,12 @@ header {
     font-size: 0.8em; }
   .main .wrapper .post-title {
     margin: 10px auto 5px;
-    color: #2980b9;
+    color: #4c6dd1;
     font-weight: 200; }
     .main .wrapper .post-title a {
       text-decoration: none; }
       .main .wrapper .post-title a:link, .main .wrapper .post-title a:visited {
-        color: #2980b9; }
+        color: #4c6dd1; }
       .main .wrapper .post-title a:hover {
         color: #e74c3c; }
 
@@ -639,10 +664,10 @@ header {
 footer {
   margin: 0 auto;
   color: #777; }
-  @media (min-width: 901px) {
+  @media (min-width: 1001px) {
     footer {
-      width: 700px; } }
-  @media (max-width: 900px) {
+      width: 1000px; } }
+  @media (max-width: 1000px) {
     footer {
       width: 90%; } }
 

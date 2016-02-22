@@ -1,10 +1,41 @@
-.toc {
-  $toc-item-color: #134A6B;
-  list-style: none;
+.side.toc {
+  $toc-item-color: #3498db;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  @include media(">1000px") {
+    float: left;
+  }
+  @include media("<1000px") {
+    display: none;
+  }
+  .toc-title {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .toc {
+    padding-left: 0;
+  }
+  ol {
+    list-style: none;
+    padding-left: 20px;
+  }
   li {
-    margin-bottom: 7px 0;
+    margin: 6px 0;
+    &.active {
+      font-weight: bold;
+    }
   }
   a {
     text-decoration: none;
+    color: $toc-item-color;
+  }
+}
+
+.content {
+  @include media(">1000px") {
+    float: right;
+    width: 700px;
   }
 }

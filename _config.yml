@@ -7,4 +7,7 @@ menu:
 # show posts nav button at post footer
 post_nav: true
 
+# show toc
+# enable_toc: true
+
 # description: You should place your <strong>description</strong> of your site here

@@ -28,9 +28,9 @@ header {
   background: #333;
   background: rgba(0,0,0,0.8);
   .wrapper {
-    @include media(">900px") {
+    @include media(">1000px") {
       margin: 0 auto;
-      width: $main-width;
+      width: 1000px;
     }
     @include media("<=900px") {
       margin: 0 15px 0;
@@ -91,11 +91,11 @@ header {
     line-height: 1.6em;
   }
   .wrapper {
-    @include media(">900px") {
+    @include media(">1000px") {
       margin: 0 auto 25px;
-      width: $main-width;
+      width: 1000px;
     }
-    @include media("<=900px") {
+    @include media("<=1000px") {
       margin: 0 15px 25px;
     }
     h2 {
@@ -124,12 +124,12 @@ header {
     }
     .post-title {
       margin: 10px auto 5px;
-      color: #2980b9;
+      color: #4c6dd1;
       font-weight: 200;
       a {
         text-decoration: none;
         &:link, &:visited {
-          color: #2980b9;
+          color: #4c6dd1;
         }
         &:hover {
           color: #e74c3c;
@@ -277,10 +277,10 @@ header {
 }
 
 footer {
-  @include media (">900px") {
-    width: $main-width;
+  @include media (">1000px") {
+    width: 1000px;
   }
-  @include media ("<=900px") {
+  @include media ("<=1000px") {
     width: 90%;
   }
   margin: 0 auto;
