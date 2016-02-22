@@ -3,6 +3,7 @@
 @import "normalize";
 @import "highlight";
 @import "extra";
+@import "toc";
 
 .clearfix:after {
    content: ".";
@@ -92,7 +93,7 @@ header {
   .wrapper {
     @include media(">900px") {
       margin: 0 auto 25px;
-      width: 800px;
+      width: $main-width;
     }
     @include media("<=900px") {
       margin: 0 15px 25px;
