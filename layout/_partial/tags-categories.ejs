@@ -1,0 +1,27 @@
+<% if (post.tags.data.length + post.categories.data.length > 0) { %>
+<div class="post-tags">
+  Posted
+  <% if (post.categories.data.length > 0) { %>
+    <% if (post.categories.data.length > 1) { %>
+    in categories
+    <% } else { %>
+    in category
+    <% } %>
+    <% for(var i=0; i<post.categories.data.length; i++) { %>
+      <% var cate = post.categories.data[i] %>
+      <a href="<%- url_for(cate.path) %>"><%= cate.name %></a>
+    <% } %>
+  <% } %>
+  <% if (post.tags.data.length > 0) { %>
+    <% if (post.tags.data.length > 1) { %>
+    with tags
+    <% } else { %>
+    with tag
+    <% } %>
+    <% for(var i=0; i<post.tags.data.length; i++) { %>
+      <% var tag = post.tags.data[i] %>
+      <a href="<%- url_for(tag.path) %>">#<%= tag.name %></a>
+    <% } %>
+  <% } %>
+</div>
+<% } %>
