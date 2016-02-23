@@ -12,11 +12,11 @@
       <span class="post-meta"><%- date(post.date, 'MMMM D, YYYY') %></span>
     </div>
     <%- partial('_partial/toc') -%>
-    <div class="content">
+    <div class="post-content">
       <%- post.content %>
-      <%- partial('tags-categories', {post: page}) -%>
-      <%- partial('disqus') -%>
     </div>
+    <%- partial('tags-categories', {post: page}) -%>
+    <%- partial('disqus') -%>
   </div>
   <%- partial('post-nav') -%>
 </section>

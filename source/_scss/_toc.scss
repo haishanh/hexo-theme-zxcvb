@@ -33,7 +33,7 @@
   }
 }
 
-.content {
+.post-content {
   @include media(">850px") {
     // float: right;
     width: $main-width;

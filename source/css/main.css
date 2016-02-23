@@ -455,7 +455,7 @@ th {
     color: #3498db; }
 
 @media (min-width: 851px) {
-  .content {
+  .post-content {
     width: 700px; } }
 
 .clearfix:after {
