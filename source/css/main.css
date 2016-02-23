@@ -473,11 +473,11 @@ header {
   height: 50px;
   background: #333;
   background: rgba(0, 0, 0, 0.8); }
-  @media (min-width: 851px) {
+  @media (min-width: 731px) {
     header .wrapper {
       margin: 0 auto;
       width: 700px; } }
-  @media (max-width: 850px) {
+  @media (max-width: 730px) {
     header .wrapper {
       margin: 0 15px 0; } }
   header .site-title {
@@ -522,11 +522,11 @@ header {
       letter-spacing: -0.2em; }
   .main p {
     line-height: 1.6em; }
-  @media (min-width: 851px) {
+  @media (min-width: 731px) {
     .main .wrapper {
       margin: 0 auto 25px;
       width: 700px; } }
-  @media (max-width: 850px) {
+  @media (max-width: 730px) {
     .main .wrapper {
       margin: 0 15px 25px; } }
   .main .wrapper h2 {
@@ -579,6 +579,9 @@ header {
   max-width: 100%;
   display: block;
   margin: 0 auto; }
+  .post img.large, .post img.extrawide {
+    max-width: 730px;
+    margin-left: -15px; }
 
 .post h1, .post h2, .post h3, .post h4, .post h5 {
   font-weight: 300; }
@@ -641,7 +644,7 @@ header {
       color: #3498db;
       border: 1px solid #3498db; }
 
-@media (max-width: 850px) {
+@media (max-width: 730px) {
   #disqus_thread {
     display: none; } }
 
@@ -668,12 +671,12 @@ header {
 footer {
   margin: 0 auto;
   color: #777; }
-  @media (min-width: 851px) {
+  @media (min-width: 731px) {
     footer {
       width: 700px; } }
-  @media (max-width: 850px) {
+  @media (max-width: 730px) {
     footer {
-      width: 90%; } }
+      margin: 0 15px; } }
 
 .highlight {
   margin: 0;
@@ -688,7 +691,7 @@ footer {
     padding-left: 10px;
     border-left: 2px solid #aaa; }
 
-@media (min-width: 851px) {
+@media (min-width: 731px) {
   .post-content {
     width: 700px; } }
 

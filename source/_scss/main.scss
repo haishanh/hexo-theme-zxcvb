@@ -5,6 +5,8 @@
 @import "extra";
 @import "toc";
 
+$break-point: $main-width + $mobile-margin-side * 2;
+
 .clearfix:after {
    content: ".";
    visibility: hidden;
@@ -28,12 +30,12 @@ header {
   background: #333;
   background: rgba(0,0,0,0.8);
   .wrapper {
-    @include media(">850px") {
+    @include media(">#{$break-point}") {
       margin: 0 auto;
       width: $main-width;
     }
-    @include media("<=850px") {
-      margin: 0 15px 0;
+    @include media("<=#{$break-point}") {
+      margin: 0 $mobile-margin-side 0;
     }
   }
   .site-title {
@@ -91,12 +93,12 @@ header {
     line-height: 1.6em;
   }
   .wrapper {
-    @include media(">850px") {
+    @include media(">#{$break-point}") {
       margin: 0 auto 25px;
       width: $main-width;
     }
-    @include media("<=850px") {
-      margin: 0 15px 25px;
+    @include media("<=#{$break-point}") {
+      margin: 0 $mobile-margin-side 25px;
     }
     h2 {
       color: #2c3e50;
@@ -168,6 +170,10 @@ header {
     max-width: 100%;
     display: block;
     margin: 0 auto;
+    &.large, &.extrawide {
+      max-width: $main-width + $mobile-margin-side * 2;
+      margin-left: -$mobile-margin-side;
+    }
   }
 
   h1, h2, h3, h4, h5 {
@@ -253,7 +259,7 @@ header {
 }
 
 #disqus_thread {
-  @include media("<=850px") {
+  @include media("<=#{$break-point}") {
     display: none;
   }
 }
@@ -288,11 +294,11 @@ header {
 }
 
 footer {
-  @include media (">850px") {
+  @include media (">#{$break-point}") {
     width: $main-width;
   }
-  @include media ("<=850px") {
-    width: 90%;
+  @include media ("<=#{$break-point}") {
+    margin: 0 $mobile-margin-side;
   }
   margin: 0 auto;
   color: #777;
@@ -319,7 +325,7 @@ footer {
 
 
 .post-content {
-  @include media(">850px") {
+  @include media(">#{$break-point}") {
     // float: right;
     width: $main-width;
   }
