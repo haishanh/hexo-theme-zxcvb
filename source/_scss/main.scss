@@ -305,6 +305,7 @@ footer {
 }
 
 .highlight {
+  $padding: 8px;
   .gutter {
     & pre {
       color: #777;
@@ -314,12 +315,13 @@ footer {
   .code {
     & pre {
       margin-left: 5px;
-      padding-left: 10px;
+      padding: 0 7px;;
       border-left: 2px solid #aaa;
+      width: $main-width - $padding * 2 - 21px;
     }
   }
   margin: 0;
-  padding: 0.5em;
+  padding: $padding;
   background: #f5f5f5;
 }
 
