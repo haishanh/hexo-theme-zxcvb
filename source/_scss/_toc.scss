@@ -34,8 +34,8 @@
 }
 
 .content {
-  @include media(">1000px") {
-    float: right;
-    width: 700px;
+  @include media(">850px") {
+    // float: right;
+    width: $main-width;
   }
 }

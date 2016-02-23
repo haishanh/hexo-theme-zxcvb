@@ -28,11 +28,11 @@ header {
   background: #333;
   background: rgba(0,0,0,0.8);
   .wrapper {
-    @include media(">1000px") {
+    @include media(">850px") {
       margin: 0 auto;
-      width: 1000px;
+      width: $main-width;
     }
-    @include media("<=900px") {
+    @include media("<=850px") {
       margin: 0 15px 0;
     }
   }
@@ -91,11 +91,11 @@ header {
     line-height: 1.6em;
   }
   .wrapper {
-    @include media(">1000px") {
+    @include media(">850px") {
       margin: 0 auto 25px;
-      width: 1000px;
+      width: $main-width;
     }
-    @include media("<=1000px") {
+    @include media("<=850px") {
       margin: 0 15px 25px;
     }
     h2 {
@@ -242,7 +242,7 @@ header {
 }
 
 #disqus_thread {
-  @include media("<=900px") {
+  @include media("<=850px") {
     display: none;
   }
 }
@@ -277,10 +277,10 @@ header {
 }
 
 footer {
-  @include media (">1000px") {
-    width: 1000px;
+  @include media (">850px") {
+    width: $main-width;
   }
-  @include media ("<=1000px") {
+  @include media ("<=850px") {
     width: 90%;
   }
   margin: 0 auto;

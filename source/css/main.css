@@ -454,9 +454,8 @@ th {
     text-decoration: none;
     color: #3498db; }
 
-@media (min-width: 1001px) {
+@media (min-width: 851px) {
   .content {
-    float: right;
     width: 700px; } }
 
 .clearfix:after {
@@ -478,11 +477,11 @@ header {
   height: 50px;
   background: #333;
   background: rgba(0, 0, 0, 0.8); }
-  @media (min-width: 1001px) {
+  @media (min-width: 851px) {
     header .wrapper {
       margin: 0 auto;
-      width: 1000px; } }
-  @media (max-width: 900px) {
+      width: 700px; } }
+  @media (max-width: 850px) {
     header .wrapper {
       margin: 0 15px 0; } }
   header .site-title {
@@ -527,11 +526,11 @@ header {
       letter-spacing: -0.2em; }
   .main p {
     line-height: 1.6em; }
-  @media (min-width: 1001px) {
+  @media (min-width: 851px) {
     .main .wrapper {
       margin: 0 auto 25px;
-      width: 1000px; } }
-  @media (max-width: 1000px) {
+      width: 700px; } }
+  @media (max-width: 850px) {
     .main .wrapper {
       margin: 0 15px 25px; } }
   .main .wrapper h2 {
@@ -637,7 +636,7 @@ header {
       color: #3498db;
       border: 1px solid #3498db; }
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
   #disqus_thread {
     display: none; } }
 
@@ -664,10 +663,10 @@ header {
 footer {
   margin: 0 auto;
   color: #777; }
-  @media (min-width: 1001px) {
+  @media (min-width: 851px) {
     footer {
-      width: 1000px; } }
-  @media (max-width: 1000px) {
+      width: 700px; } }
+  @media (max-width: 850px) {
     footer {
       width: 90%; } }
 
