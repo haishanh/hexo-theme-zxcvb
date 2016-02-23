@@ -454,10 +454,6 @@ th {
     text-decoration: none;
     color: #3498db; }
 
-@media (min-width: 851px) {
-  .post-content {
-    width: 700px; } }
-
 .clearfix:after {
   content: ".";
   visibility: hidden;
@@ -691,3 +687,14 @@ footer {
     margin-left: 5px;
     padding-left: 10px;
     border-left: 2px solid #aaa; }
+
+@media (min-width: 851px) {
+  .post-content {
+    width: 700px; } }
+
+.post-content a:hover {
+  background: #555;
+  border-radius: 3px;
+  color: #f3f3f3;
+  text-decoration: none;
+  transition: all 0.5s ease; }
