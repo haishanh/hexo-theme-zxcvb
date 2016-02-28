@@ -305,23 +305,26 @@ footer {
 }
 
 .highlight {
-  $padding: 8px;
   .gutter {
     & pre {
       color: #777;
+      margin: 0;
     }
+    padding: 24px 16px;
     text-align: right;
+    vertical-align: top;
+    background: #e5e5e5;
   }
   .code {
+    max-width: 0;
+    width: 100%;
     & pre {
-      margin-left: 5px;
-      padding: 0 7px;;
-      border-left: 2px solid #aaa;
-      width: $main-width - $padding * 2 - 21px;
+      margin: 0;
+      padding: 24px 20px 24px 10px;;
+      // border-left: 2px solid #aaa;
     }
   }
-  margin: 0;
-  padding: $padding;
+  margin: 0 -15px;
   background: #f5f5f5;
 }
 

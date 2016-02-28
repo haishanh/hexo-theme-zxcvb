@@ -679,18 +679,22 @@ footer {
       margin: 0 15px; } }
 
 .highlight {
-  margin: 0;
-  padding: 8px;
+  margin: 0 -15px;
   background: #f5f5f5; }
   .highlight .gutter {
-    text-align: right; }
+    padding: 24px 16px;
+    text-align: right;
+    vertical-align: top;
+    background: #e5e5e5; }
     .highlight .gutter pre {
-      color: #777; }
-  .highlight .code pre {
-    margin-left: 5px;
-    padding: 0 7px;
-    border-left: 2px solid #aaa;
-    width: 663px; }
+      color: #777;
+      margin: 0; }
+  .highlight .code {
+    max-width: 0;
+    width: 100%; }
+    .highlight .code pre {
+      margin: 0;
+      padding: 24px 20px 24px 10px; }
 
 @media (min-width: 731px) {
   .post-content {
