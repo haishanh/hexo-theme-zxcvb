@@ -17,6 +17,34 @@ Then change your `theme` setting in `_config.yml`.
 theme: zxcvb
 ```
 
+### Features
+
+#### Post banner
+
+Add the following config in the front matter of your post to get a stunning edge to edge banner picture.
+
+```text
+---
+title: Test post
+date: 2016-02-23
+updated: 2016-02-29
+banner:
+  image: http://7fva40.com1.z0.glb.clouddn.com/carlog-404-sprite.jpg
+  size: cover
+  position: center
+  height: 450px
+---
+```
+
+This will add **inline style** to the `<header>` element, rule mapping as below:
+
+```text
+ * image    -> background-image    (this value can't be ommited)
+ * size     -> background-size     (default to "cover")
+ * position -> background-position (default to "center")
+ * height   -> height              (default to "450px")
+```
+
 ### Customization
 
 Install requirements first.

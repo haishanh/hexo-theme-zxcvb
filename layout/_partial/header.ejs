@@ -10,7 +10,10 @@
 </head>
 <body>
 <% if (page.banner) { %>
-<header style="background-image:url('<%= page.banner %>'); background-size: cover; height: 500px;">
+  <% var bgSize = page.banner.size || 'cover'; %>
+  <% var bgHeight = page.banner.height || '450px'; %>
+  <% var bgPosition = page.banner.position || 'center'; %>
+<header style="background-image:url('<%= page.banner.image %>'); background-size: <%= bgSize %>; background-position: <%= bgPosition %>; height: <%= bgHeight %>;">
 <% } else { %>
 <header>
 <% } %>
