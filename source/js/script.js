@@ -37,4 +37,19 @@
   }
 
   updateNav();
+
+  // .post-footer comments button
+  var disqus = $('#disqus_thread');
+  var commentsTriiger = $('#comments-trigger');
+  var disqus_loaded = false;
+  commentsTriiger.addEventListener('click', function (ev) {
+    ev.preventDefault();
+    if (! disqus_loaded) {
+      load_disqus(); // from _partial/disqus.ejs
+      disqus_loaded = true;
+    } else {
+      disqus.classList.toggle('hide');
+    }
+  });
+
 }(document, window))

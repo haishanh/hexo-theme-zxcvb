@@ -247,7 +247,7 @@ header {
     text-decoration: none;
     color: #999;
     border: 1px solid #fff;
-    border-color: rgba(0,0,0,0);
+    border-color: #999;
     border-radius: 5px;
     padding: 10px;
     margin: 5px;
@@ -259,8 +259,13 @@ header {
 }
 
 #disqus_thread {
-  @include media("<=#{$break-point}") {
+  &.hide {
     display: none;
+  }
+  iframe {
+    height: 327px;
+    height: auto !important;
+    min-height: 327px;
   }
 }
 

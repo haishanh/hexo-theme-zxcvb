@@ -7,7 +7,13 @@ menu:
 # show posts nav button at post footer
 post_nav: true
 
-# show toc
+## show toc
 # enable_toc: true
+
+## enable disqus powered comment system
+# disqus_shortname: terminal-ninja
+
+## enable view source, only github repo supported
+# source_repo: https://github.com/haishanh/terminal/blob/master
 
 # description: You should place your <strong>description</strong> of your site here
