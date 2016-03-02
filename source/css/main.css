@@ -682,6 +682,16 @@ footer {
   @media (max-width: 730px) {
     footer {
       margin: 0 15px; } }
+  footer .additional {
+    margin: 0 auto;
+    padding: 20px 0;
+    color: #aaa;
+    font-size: 0.8em;
+    text-align: center; }
+    footer .additional a {
+      text-decoration: none;
+      color: #aaa;
+      font-weight: bold; }
 
 .highlight {
   position: relative;

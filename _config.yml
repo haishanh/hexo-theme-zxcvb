@@ -17,3 +17,6 @@ post_nav: true
 # source_repo: https://github.com/haishanh/terminal/blob/master
 
 # description: You should place your <strong>description</strong> of your site here
+
+## this will display at the bottom of the footer
+# footer: <span>&copy;</span> 2016 John Doe<br>Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.

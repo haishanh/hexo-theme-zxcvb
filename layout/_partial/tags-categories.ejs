@@ -1,4 +1,4 @@
-<% if (post.tags.data.length + post.categories.data.length > 0) { %>
+<% if (post.tags && (post.tags.data.length + post.categories.data.length > 0)) { %>
 <div class="post-tags">
   Posted
   <% if (post.categories.data.length > 0) { %>
