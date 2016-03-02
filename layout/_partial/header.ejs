@@ -17,9 +17,10 @@
 <% } else { %>
 <header>
 <% } %>
-  <div class="wrapper">
+  <div class="wrapper clearfix">
     <a href="<%- theme.root %>" class="site-title"><code>$_</code></a>
     <% if (theme.menu) { %>
+    <span class="hamburger"></span>
     <ul class="nav">
       <% for (var i in theme.menu) { %>
       <li>

@@ -1,0 +1,38 @@
+.hamburger {
+  display: inline-block;
+  width: 30px;
+  height: 5px;
+  background: #f8f8f8;
+  position: relative;
+  &:before, &:after {
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    left: 0;
+    transition: transform 0.5s ease;
+  }
+  &:before {
+    background: #f8f8f8;
+    top: -200%;
+  }
+  &:after {
+    background: #f8f8f8;
+    top: 200%;
+  }
+
+}
+
+.hamburger.toggle {
+  visibility: hidden;
+  &:before, &:after {
+    visibility: visible;
+    //transition: all 0.5s ease;
+  }
+  &:before {
+    transform: translate(0, 200%)  rotate(45deg);
+  }
+  &:after {
+    transform: translate(0, -200%)  rotate(-45deg);
+  }
+}

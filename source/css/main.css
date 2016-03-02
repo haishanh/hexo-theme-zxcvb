@@ -481,6 +481,33 @@ header {
   @media (max-width: 730px) {
     header .wrapper {
       margin: 0 15px 0; } }
+  header .wrapper .hamburger {
+    display: inline-block;
+    width: 30px;
+    height: 5px;
+    background: #f8f8f8;
+    position: relative; }
+    header .wrapper .hamburger:before, header .wrapper .hamburger:after {
+      content: " ";
+      position: absolute;
+      width: 30px;
+      height: 5px;
+      left: 0;
+      transition: transform 0.5s ease; }
+    header .wrapper .hamburger:before {
+      background: #f8f8f8;
+      top: -200%; }
+    header .wrapper .hamburger:after {
+      background: #f8f8f8;
+      top: 200%; }
+  header .wrapper .hamburger.toggle {
+    visibility: hidden; }
+    header .wrapper .hamburger.toggle:before, header .wrapper .hamburger.toggle:after {
+      visibility: visible; }
+    header .wrapper .hamburger.toggle:before {
+      transform: translate(0, 200%) rotate(45deg); }
+    header .wrapper .hamburger.toggle:after {
+      transform: translate(0, -200%) rotate(-45deg); }
   header .site-title {
     color: #ecf0f1;
     text-decoration: none;

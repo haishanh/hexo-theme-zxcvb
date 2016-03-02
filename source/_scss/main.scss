@@ -38,6 +38,7 @@ header {
     @include media("<=#{$break-point}") {
       margin: 0 $margin-side 0;
     }
+    @import "hamburger";
   }
   .site-title {
     color: #ecf0f1; //cloud
