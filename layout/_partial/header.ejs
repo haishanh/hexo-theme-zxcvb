@@ -20,14 +20,12 @@
   <div class="wrapper clearfix">
     <a href="<%- theme.root %>" class="site-title"><code>$_</code></a>
     <% if (theme.menu) { %>
-    <span class="hamburger"></span>
-    <ul class="nav">
+    <div class="menu"><span class="hamburger"><span></span></span></div>
+    <nav role="navigation" class="nav">
       <% for (var i in theme.menu) { %>
-      <li>
-        <a href="<%- theme.root + theme.menu[i].replace(/^\//,'') %>"><%= i %></a>
-      </li>
+      <a href="<%- theme.root + theme.menu[i].replace(/^\//,'') %>"><%= i %></a>
       <% } %>
-    </ul>
+    </nav>
     <% } %>
   </div>
 </header>

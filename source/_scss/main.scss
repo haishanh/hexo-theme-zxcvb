@@ -5,7 +5,12 @@
 @import "extra";
 @import "toc";
 
-$break-point: $main-width + $margin-side * 2;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 
 .clearfix:after {
    content: ".";
@@ -26,19 +31,25 @@ code, pre {
 }
 
 header {
-  border-bottom: 1px solid #e8e8e8;
   height: 50px;
   background: #333;
   background: rgba(0,0,0,0.8);
   .wrapper {
-    @include media(">#{$break-point}") {
+    @media screen and (min-width: ($break-point - 1px)) {
+    //@include media(">#{$break-point}") {
       margin: 0 auto;
       width: $main-width;
     }
-    @include media("<=#{$break-point}") {
+    @media screen and (max-width: $break-point) {
+    //@include media("<=#{$break-point}") {
       margin: 0 $margin-side 0;
     }
-    @import "hamburger";
+    .menu {
+      float: right;
+      padding: 15px 0;
+      @import "hamburger";
+    }
+    @import "header-nav";
   }
   .site-title {
     color: #ecf0f1; //cloud
@@ -53,27 +64,7 @@ header {
       text-decoration: none;
     }
   }
-  .nav {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline;
-    margin-top: 15px;
-    float: right;
-    li {
-      display: inline;
-      padding: 5px;
-      a {
-        text-decoration: none;
-        color: #eee;
-        &:hover {
-          color: #999;
-        }
-      }
-    }
-  }
 }
-
 
 /**
  * main
@@ -95,11 +86,13 @@ header {
     line-height: 1.6em;
   }
   .wrapper {
-    @include media(">#{$break-point}") {
+    @media screen and (min-width: ($break-point - 1px)) {
+    //@include media(">#{$break-point}") {
       margin: 0 auto 25px;
       width: $main-width;
     }
-    @include media("<=#{$break-point}") {
+    @media screen and (max-width: $break-point) {
+    //@include media("<=#{$break-point}") {
       margin: 0 $margin-side 25px;
     }
     h2 {
@@ -224,7 +217,7 @@ header {
   }
   .nav {
     position: absolute;
-    @include media(">1100px") {
+    @media screen and (min-width: 1100px) {
       position: fixed;
     }
     &.stop {
@@ -301,10 +294,12 @@ header {
 }
 
 footer {
-  @include media (">#{$break-point}") {
+  @media screen and (min-width: ($break-point - 1px)) {
+  //@include media (">#{$break-point}") {
     width: $main-width;
   }
-  @include media ("<=#{$break-point}") {
+  @media screen and (max-width: $break-point) {
+  //@include media ("<=#{$break-point}") {
     margin: 0 $margin-side;
   }
   margin: 0 auto;
@@ -363,8 +358,8 @@ footer {
 
 
 .post-content {
-  @include media(">#{$break-point}") {
-    // float: right;
+  @media screen and (min-width: ($break-point - 1px)) {
+  // @include media(">#{$break-point}") {
     width: $main-width;
   }
   a:hover {

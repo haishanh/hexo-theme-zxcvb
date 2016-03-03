@@ -1,5 +1,8 @@
+$menu-num: 3;
 $main-width : 700px;
 // $mobile-margin-side: 15px;
 $margin-side: 15px;
+$header-height: 50px;
+$break-point: $main-width + $margin-side * 2;
 $font-base: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
 $font-mono: Consolas, Monaco, Menlo, Consolas, "Courier New", monospace;

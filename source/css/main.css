@@ -454,6 +454,11 @@ th {
     text-decoration: none;
     color: #3498db; }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
 .clearfix:after {
   content: ".";
   visibility: hidden;
@@ -470,44 +475,90 @@ code, pre {
   font-size: 0.8em; }
 
 header {
-  border-bottom: 1px solid #e8e8e8;
   height: 50px;
   background: #333;
   background: rgba(0, 0, 0, 0.8); }
-  @media (min-width: 731px) {
+  @media screen and (min-width: 729px) {
     header .wrapper {
       margin: 0 auto;
       width: 700px; } }
-  @media (max-width: 730px) {
+  @media screen and (max-width: 730px) {
     header .wrapper {
       margin: 0 15px 0; } }
-  header .wrapper .hamburger {
-    display: inline-block;
-    width: 30px;
-    height: 5px;
-    background: #f8f8f8;
-    position: relative; }
-    header .wrapper .hamburger:before, header .wrapper .hamburger:after {
-      content: " ";
-      position: absolute;
-      width: 30px;
-      height: 5px;
-      left: 0;
-      transition: transform 0.5s ease; }
-    header .wrapper .hamburger:before {
-      background: #f8f8f8;
-      top: -200%; }
-    header .wrapper .hamburger:after {
-      background: #f8f8f8;
-      top: 200%; }
-  header .wrapper .hamburger.toggle {
-    visibility: hidden; }
-    header .wrapper .hamburger.toggle:before, header .wrapper .hamburger.toggle:after {
-      visibility: visible; }
-    header .wrapper .hamburger.toggle:before {
-      transform: translate(0, 200%) rotate(45deg); }
-    header .wrapper .hamburger.toggle:after {
-      transform: translate(0, -200%) rotate(-45deg); }
+  header .wrapper .menu {
+    float: right;
+    padding: 15px 0; }
+    header .wrapper .menu .hamburger {
+      display: inline-block;
+      width: 20px;
+      height: 20px; }
+      @media screen and (min-width: 729px) {
+        header .wrapper .menu .hamburger {
+          display: none; } }
+      header .wrapper .menu .hamburger span {
+        display: inline-block;
+        width: 20px;
+        height: 1px;
+        background: #f8f8f8;
+        position: relative;
+        margin-bottom: 4px; }
+        header .wrapper .menu .hamburger span:before, header .wrapper .menu .hamburger span:after {
+          content: " ";
+          position: absolute;
+          width: 20px;
+          height: 1px;
+          left: 0;
+          transform: rotate(0);
+          transition: transform 0.35s ease; }
+        header .wrapper .menu .hamburger span:before {
+          background: #f8f8f8;
+          top: -6px; }
+        header .wrapper .menu .hamburger span:after {
+          background: #f8f8f8;
+          top: 6px; }
+      header .wrapper .menu .hamburger.toggle span {
+        visibility: hidden; }
+        header .wrapper .menu .hamburger.toggle span:before, header .wrapper .menu .hamburger.toggle span:after {
+          visibility: visible; }
+        header .wrapper .menu .hamburger.toggle span:before {
+          transform: translate(0, 6px) rotate(45deg); }
+        header .wrapper .menu .hamburger.toggle span:after {
+          transform: translate(0, -6px) rotate(-45deg); }
+  header .wrapper .nav {
+    float: right;
+    display: block;
+    background: #333;
+    padding: 15px 10px; }
+    header .wrapper .nav a {
+      padding: 10px 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      line-height: 20px;
+      color: #f8f8f8;
+      background: #333; }
+      header .wrapper .nav a:hover {
+        color: #909090; }
+    @media screen and (max-width: 730px) {
+      header .wrapper .nav {
+        z-index: 1;
+        float: none;
+        position: absolute;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px 10px;
+        visibility: hidden;
+        left: 0;
+        height: 0px;
+        overflow: hidden;
+        transition: height 0.35s ease; }
+        header .wrapper .nav a {
+          display: block;
+          border-bottom: 1px solid #717171;
+          border-radius: 0; }
+        header .wrapper .nav.toggle {
+          visibility: visible;
+          padding: 20px 10px;
+          height: 163px; } }
   header .site-title {
     color: #ecf0f1;
     text-decoration: none;
@@ -518,21 +569,6 @@ header {
     header .site-title:hover {
       color: #10ff04;
       text-decoration: none; }
-  header .nav {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline;
-    margin-top: 15px;
-    float: right; }
-    header .nav li {
-      display: inline;
-      padding: 5px; }
-      header .nav li a {
-        text-decoration: none;
-        color: #eee; }
-        header .nav li a:hover {
-          color: #999; }
 
 /**
  * main
@@ -550,11 +586,11 @@ header {
       letter-spacing: -0.2em; }
   .main p {
     line-height: 1.6em; }
-  @media (min-width: 731px) {
+  @media screen and (min-width: 729px) {
     .main .wrapper {
       margin: 0 auto 25px;
       width: 700px; } }
-  @media (max-width: 730px) {
+  @media screen and (max-width: 730px) {
     .main .wrapper {
       margin: 0 15px 25px; } }
   .main .wrapper h2 {
@@ -645,7 +681,7 @@ header {
       fill: #555; }
   .post-nav .nav {
     position: absolute; }
-    @media (min-width: 1101px) {
+    @media screen and (min-width: 1100px) {
       .post-nav .nav {
         position: fixed; } }
     .post-nav .nav.stop {
@@ -703,10 +739,10 @@ header {
 footer {
   margin: 0 auto;
   color: #777; }
-  @media (min-width: 731px) {
+  @media screen and (min-width: 729px) {
     footer {
       width: 700px; } }
-  @media (max-width: 730px) {
+  @media screen and (max-width: 730px) {
     footer {
       margin: 0 15px; } }
   footer .additional {
@@ -750,7 +786,7 @@ footer {
       margin: 0;
       padding: 24px 20px 24px 10px; }
 
-@media (min-width: 731px) {
+@media screen and (min-width: 729px) {
   .post-content {
     width: 700px; } }
 

@@ -3,6 +3,14 @@
   var $ = d.querySelector.bind(d);
   var $$ = d.querySelectorAll.bind(d);
 
+  // <header> nav -> responsive
+  var burger = $('.hamburger');
+  burger.addEventListener('click', function (ev) {
+    burger.classList.toggle('toggle');
+    var nav = $('nav');
+    nav.classList.toggle('toggle');
+  });
+
   // POSTS NAV POSITION
   var nav = $('.post-nav');
   var navUpdateTicking = false;

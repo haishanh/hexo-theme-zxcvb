@@ -1,0 +1,47 @@
+.nav {
+  // LOCAL VARS
+  $a-line-height: 20px;
+  $a-padding-top-bottom: 10px;
+  // padding-top + padding-bottom + line-height + border-bottom
+  $a-actual-height: 2 * $a-padding-top-bottom + $a-line-height + 1px;
+
+  float: right;
+  display: block;
+  background: #333;
+  padding: ($header-height - $a-line-height)/2 10px;
+  a {
+    padding: $a-padding-top-bottom 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    line-height: $a-line-height;
+    color: #f8f8f8;
+    background: #333;
+    &:hover {
+      color: #909090;
+    }
+  }
+  @media screen and (max-width: $break-point) {
+    z-index: 1;
+    float: none;
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 10px;
+    visibility: hidden;
+    left: 0;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.35s ease;
+    a {
+      display: block;
+      border-bottom: 1px solid #717171;
+      border-radius: 0;
+    }
+    &.toggle {
+      visibility: visible;
+      padding: 20px 10px;
+      // a little hack to make it animate
+      height: $a-actual-height * $menu-num + 20px * 2;
+    }
+  }
+}
