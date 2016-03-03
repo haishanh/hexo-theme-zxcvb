@@ -60,6 +60,8 @@ The CSS is built from sass(scss). To build the CSS, run:
 gulp sass
 ```
 
+**Note**: When you add more menu in the `_config.yml`, you should update the value `$menu-num` in `source/_scss/_var.scss` accordingly. If not, the dropdown menu (only on moblie screen) may not display properly.
+
 ### What is missing
 
 Since I only built this theme for myself. There are some features I don't need and currently not implemented.
