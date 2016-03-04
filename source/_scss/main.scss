@@ -64,6 +64,15 @@ header {
       text-decoration: none;
     }
   }
+  &.with-bg {
+    .wrapper .nav {
+      background: none;
+      a {
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+    }
+  }
 }
 
 /**
@@ -174,9 +183,9 @@ header {
     }
   }
 
-  h1, h2, h3, h4, h5 {
-    font-weight: 300;
-  }
+  // h1, h2, h3, h4, h5 {
+  //   font-weight: 300;
+  // }
 
   blockquote {
     margin: 0;
