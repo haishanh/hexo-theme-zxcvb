@@ -8,7 +8,7 @@ menu:
 post_nav: true
 
 ## show toc
-# enable_toc: true
+# toc: true
 
 ## enable disqus powered comment system
 # disqus_shortname: terminal-ninja

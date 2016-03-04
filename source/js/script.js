@@ -1,9 +1,36 @@
 (function (d, w){
   // LESS TYPING
+
   var $ = d.querySelector.bind(d);
   var $$ = d.querySelectorAll.bind(d);
 
+  // TICKING SYSTEM - window scroll throttle
+
+  var ticking = false;
+  var updateChain = [];
+
+  function requestTick() {
+    if(!ticking) {
+      requestAnimationFrame(update);
+    }
+    ticking = true;
+  }
+
+  w.addEventListener('scroll', function (e) {
+    requestTick();
+  });
+
+  function update() {
+    // call functions in the chain one by one
+    for (var i = 0; i < updateChain.length; i ++) {
+      updateChain[i]();
+    }
+    ticking = false;
+  }
+
+
   // <header> nav -> responsive
+
   var burger = $('.hamburger');
   burger.addEventListener('click', function (ev) {
     burger.classList.toggle('toggle');
@@ -11,27 +38,34 @@
     nav.classList.toggle('toggle');
   });
 
-  // POSTS NAV POSITION
-  var nav = $('.post-nav');
-  var navUpdateTicking = false;
+  // STICK TOC
 
-  if (nav) {
-    var navTop = nav.getBoundingClientRect().top;
-    w.addEventListener('scroll', function (e) {
-      navTop = nav.getBoundingClientRect().top
-      requestTick();
-    });
+  var toc = $('.toc');
+  var tocAnchor = $('.post-content');
+  if (toc) {
+    updateChain.push(stickToc);
   }
 
-  function requestTick() {
-    if(!navUpdateTicking) {
-      requestAnimationFrame(updateNav);
+  function stickToc() {
+    var tocTop = tocAnchor.getBoundingClientRect().top;
+    if (tocTop <= 0) {
+      toc.classList.add('fixed');
+    } else {
+      toc.classList.remove('fixed');
     }
-    navUpdateTicking = true;
+  }
+
+  stickToc();
+
+  // POSTS NAV POSITION
+
+  var nav = $('.post-nav');
+  if (nav) {
+    updateChain.push(updateNav);
   }
 
   function updateNav() {
-    navUpdateTicking = false;
+    var navTop = nav.getBoundingClientRect().top;
 
     var prev = $('.post-nav .prev');
     var next = $('.post-nav .next');
@@ -48,16 +82,19 @@
 
   // .post-footer comments button
   var disqus = $('#disqus_thread');
-  var commentsTriiger = $('#comments-trigger');
+  var commentsTrigger = $('#comments-trigger');
   var disqus_loaded = false;
-  commentsTriiger.addEventListener('click', function (ev) {
-    ev.preventDefault();
-    if (! disqus_loaded) {
-      load_disqus(); // from _partial/disqus.ejs
-      disqus_loaded = true;
-    } else {
-      disqus.classList.toggle('hide');
-    }
-  });
+  if (commentsTrigger) {
+    commentsTrigger.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      if (! disqus_loaded) {
+        load_disqus(); // from _partial/disqus.ejs
+        disqus_loaded = true;
+      } else {
+        disqus.classList.toggle('hide');
+      }
+    });
+  }
 
+  //debugger;
 }(document, window))

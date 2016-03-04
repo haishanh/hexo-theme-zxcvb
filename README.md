@@ -45,6 +45,12 @@ This will add **inline style** to the `<header>` element, rule mapping as below:
  * height   -> height              (default to "450px")
 ```
 
+#### Table of content(TOC)
+
+If TOC is enabled, a TOC block is displayed besides the post itself **if the screen width is large enough**.
+
+TOC is turned off by default. To enable TOC, add `toc: true` in your `_config.yml`. In this situation, every post page will contain a TOC. But you can turn it off for a individual post by explicitly set `toc: false` in the frontmatter. If TOC is not turned on in `_config.yml`, you still can enable TOC for a individual post by explicitly set `toc: true` in the frontmatter.
+
 ### Customization
 
 Install requirements first.

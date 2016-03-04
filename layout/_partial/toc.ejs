@@ -1,6 +1,12 @@
-<% if (theme.enable_toc) { %>
+<% var toc_enabled = page.toc %>
+<% if (theme.toc) { %>
+  <% toc_enabled = toc_enabled !== false %>
+<% } else { %>
+  <% toc_enabled = toc_enabled === true %>
+<% } %>
+<% if (toc_enabled) { %>
 <div class="side toc">
-  <div class="toc-title">In this post</div>
+  <div class="toc-title">In this page</div>
   <%- toc(page.content, {class: 'toc', list_number: false}) %>
 </div>
 <% } %>

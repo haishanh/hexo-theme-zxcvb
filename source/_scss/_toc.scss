@@ -1,13 +1,23 @@
 .side.toc {
   $toc-item-color: #3498db;
-  width: 250px;
+  $toc-width: 250px;
+  $toc-shifting: $toc-width + 30px;
+  // TOC will display if screen width greater than this value
+  $toc-break-point: $main-width + $toc-shifting * 2;
+  width: $toc-width;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 5px;
-  @include media(">1000px") {
+  background: #fefefe;
+  @media screen and (min-width: $toc-break-point) {
     float: left;
+    margin-left: -$toc-shifting;
+    &.fixed {
+      position: fixed;
+      top: 0;
+    }
   }
-  @include media("<1000px") {
+  @media screen and (max-width: ($toc-break-point - 1px)) {
     display: none;
   }
   .toc-title {
@@ -30,5 +40,8 @@
   a {
     text-decoration: none;
     color: $toc-item-color;
+    &:hover {
+      color: $link-hover-red;
+    }
   }
 }
