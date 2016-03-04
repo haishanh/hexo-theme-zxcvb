@@ -67,10 +67,11 @@ header {
   &.with-bg {
     .wrapper .nav {
       background: none;
-      a {
-        border-bottom: 1px solid #f0f0f0;
+      @media screen and (max-width: $break-point) {
+        a {
+          border-bottom: 1px solid #f0f0f0;
+        }
       }
-
     }
   }
 }
