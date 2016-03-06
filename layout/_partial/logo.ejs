@@ -1,0 +1,9 @@
+<% if(theme.logo) { %>
+  <% if(theme.logo.image) { %>
+  <a href="<%- theme.root %>" class="site-title"><img src="<%- theme.logo.image %>"></a>
+  <% } else if (theme.logo.text) { %>
+  <a href="<%- theme.root %>" class="site-title"><code><%- theme.logo.text %></code></a>
+  <% } %>
+<% } else  { %>
+<a href="<%- theme.root %>" class="site-title"><code>$_</code></a>
+<% } %>
