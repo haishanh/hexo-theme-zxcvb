@@ -43,6 +43,7 @@
   var toc = $('.toc');
   var tocAnchor = $('.post-content');
   if (toc) {
+    stickToc();
     updateChain.push(stickToc);
   }
 
@@ -55,12 +56,11 @@
     }
   }
 
-  stickToc();
-
   // POSTS NAV POSITION
 
   var nav = $('.post-nav');
   if (nav) {
+    updateNav();
     updateChain.push(updateNav);
   }
 
@@ -77,8 +77,6 @@
       next && next.classList.contains('stop') && next.classList.remove('stop');
     }
   }
-
-  updateNav();
 
   // .post-footer comments button
   var disqus = $('#disqus_thread');

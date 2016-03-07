@@ -1,6 +1,8 @@
 ## hexo-theme-zxcvb
 
-zxcvb is a them for [hexo][hexo].
+![zxcvb](https://github.com/haishanh/hexo-theme-zxcvb/blob/master/_assets/zxcvb-black.png)
+
+zxcvb is a theme for [hexo][hexo].
 
 ### Usage
 
@@ -60,20 +62,18 @@ cd themes/zxcvb
 npm install
 ```
 
-The CSS is built from sass(scss). To build the CSS, run:
+The CSS is built from sass(scss). To build it, run:
 
 ```sh
 gulp sass
 ```
 
-**Note**: When you add more menu in the `_config.yml`, you should update the value `$menu-num` in `source/_scss/_var.scss` accordingly. If not, the dropdown menu (only on moblie screen) may not display properly.
+**Note**: After you add more menu in the `_config.yml`, you should update the value `$menu-num` in `source/_scss/_var.scss` accordingly. If not, the dropdown menu (only on moblie screen) may not display properly.
 
 ### What is missing
 
 Since I only built this theme for myself. There are some features I don't need and currently not implemented.
 
- * categories
- * tags
  * photo layout/post
  * link layout/post
 
