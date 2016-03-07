@@ -9,14 +9,17 @@
           <a href="<%- url_for(post.path) %>"><%= post.title %></a>
         <% } %>
       </h1>
+      <%if(theme.time_meta === false || post.time_meta === false) { %>
+      <% } else { %>
       <span class="post-meta"><%- date(post.date, 'MMMM D, YYYY') %></span>
+      <% } %>
     </div>
     <%- partial('_partial/toc') -%>
     <div class="post-content">
       <%- post.content %>
     </div>
-    <%- partial('tags-categories', {post: page}) -%>
-    <%- partial('post-footer') -%>
+    <%- partial('post-footer', {post: page}) -%>
+    <%- partial('post-buttons') -%>
     <%- partial('disqus') -%>
   </div>
   <%- partial('post-nav') -%>

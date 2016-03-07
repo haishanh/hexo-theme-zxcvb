@@ -1,0 +1,10 @@
+<% if ((theme.disqus_shortname && page.comments) || theme.source_repo) { %>
+<div class="post-buttons">
+  <% if (theme.disqus_shortname && page.comments) { %>
+    <a href="#" id="comments-trigger">Comments</a>
+  <% } %>
+  <% if (theme.source_repo) { %>
+    <a href="<%= theme.source_repo + '/source/' + page.source %>">Source</a>
+  <% } %>
+</div>
+<% } %>

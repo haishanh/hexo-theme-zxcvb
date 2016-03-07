@@ -9,6 +9,7 @@
   border-radius: 5px;
   padding: 5px;
   background: #fefefe;
+  z-index: 2;
   @media screen and (min-width: $toc-break-point) {
     float: left;
     margin-left: -$toc-shifting;

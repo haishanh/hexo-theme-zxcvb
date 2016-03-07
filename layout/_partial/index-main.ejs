@@ -4,7 +4,10 @@
     <ul class="post-list">
       <% page.posts.each(function (post) { %>
       <li class="post-item">
+        <% if(theme.time_meta === false) { %>
+        <% } else { %>
         <span class="post-meta"><%- date(post.date, 'MMMM D, YYYY') %></span>
+        <% } %>
         <h2 class="post-title">
           <% if (post.link) { %>
             <a href="<%- url_for(post.link) %>" target="_blank"><%= post.title %></a>

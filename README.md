@@ -1,12 +1,10 @@
-## hexo-theme-zxcvb
-
 ![zxcvb](https://github.com/haishanh/hexo-theme-zxcvb/blob/master/_assets/zxcvb-black.png)
 
 zxcvb is a theme for [hexo][hexo].
 
 ### Usage
 
-To use theme, you just need to clone this repo into the themes directory of your hexo site.
+To use this theme, you just need to clone this repo into directory `themes` of your hexo site.
 
 ```sh
 cd /path/to/your/hexo/site
