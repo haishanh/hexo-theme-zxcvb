@@ -7,7 +7,7 @@
   width: $toc-width;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
   background: #fefefe;
   z-index: 2;
   @media screen and (min-width: $toc-break-point) {
@@ -24,6 +24,10 @@
   .toc-title {
     margin-top: 10px;
     font-size: 20px;
+    border-left: 1px solid blue;
+    margin-left: -10px;
+    padding-left: 10px;
+    font-weight: bold;
   }
   .toc {
     padding-left: 0;

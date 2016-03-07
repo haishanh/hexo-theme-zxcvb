@@ -1,8 +1,8 @@
 # Header
-menu:
-  Home: /
-  Archives: /archives
-  RSS: /atom.xml
+#menu:
+#  Home: /
+#  Archives: /archives
+#  RSS: /atom.xml
 
 # show posts nav button at post footer
 post_nav: true
