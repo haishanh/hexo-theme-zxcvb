@@ -23,7 +23,7 @@
     <div class="menu"><span class="hamburger"><span></span></span></div>
     <nav role="navigation" class="nav">
       <% for (var i in theme.menu) { %>
-      <a href="<%- theme.root + theme.menu[i].replace(/^\//,'') %>"><%= i %></a>
+      <a href="<%- theme.menu[i] %>"><%= i %></a>
       <% } %>
     </nav>
     <% } %>
