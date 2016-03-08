@@ -32,8 +32,7 @@ code, pre {
 
 header {
   height: $header-height;
-  background: #333;
-  background: rgba(0,0,0,0.8);
+  background: $header-color;
   .wrapper {
     @media screen and (min-width: ($break-point - 1px)) {
     //@include media(">#{$break-point}") {
@@ -100,6 +99,35 @@ header {
     border: none;
     height: 0;
     border-top: 1px solid #ddd;
+  }
+  dl { // definition list
+    dt {
+      margin-left: 2em;
+      font-weight: bold;
+    }
+    dd {
+      margin-left: 2em;
+    }
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1em 0;
+    width: 100%;
+    td,
+    th {
+      text-align: left;
+      vertical-align: middle;
+    }
+    th {
+      font-weight: bold;
+      padding-bottom: 0.5em;
+      border-bottom: 2px solid #999;
+    }
+    td {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
   }
   p {
     line-height: 1.6em;
@@ -373,6 +401,7 @@ footer {
   .code {
     max-width: 0;
     width: 100%;
+    padding: 0;
     & pre {
       margin: 0;
       padding: 24px 20px 24px 10px;;
