@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="zxcvb.hanhaishan.com">
+  <a href="http://zxcvb.hanhaishan.com">
     <img src="https://github.com/haishanh/hexo-theme-zxcvb/blob/master/_assets/zxcvb-black.png">
   </a>
   <p align="center">A <a href="https://hexo.io">hexo</a> theme</p>
