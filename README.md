@@ -1,6 +1,9 @@
-![zxcvb](https://github.com/haishanh/hexo-theme-zxcvb/blob/master/_assets/zxcvb-black.png)
-
-zxcvb is a theme for [hexo][hexo].
+<p align="center">
+  <a href="zxcvb.hanhaishan.com">
+    <img src="https://github.com/haishanh/hexo-theme-zxcvb/blob/master/_assets/zxcvb-black.png">
+  </a>
+  <p align="center">A <a href="https://hexo.io">hexo</a> theme</p>
+</p>
 
 ### Usage
 
@@ -74,6 +77,3 @@ Since I only built this theme for myself. There are some features I don't need a
 
  * photo layout/post
  * link layout/post
-
-
-[hexo]: https://hexo.io
