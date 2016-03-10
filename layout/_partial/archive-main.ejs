@@ -12,7 +12,7 @@
       <% } %>
       <% last = year %>
         <li class="post-item">
-          <span class="post-meta"><%- date(post.date, 'MMM D YYYY') %></span>
+          <span class="post-meta"><%- date(post.date, 'MMMM D, YYYY') %></span>
           <h2 class="post-title">
             <% if (post.link) { %>
               <a href="<%- url_for(post.link) %>" target="_blank"><%= post.title %></a>
