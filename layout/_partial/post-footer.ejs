@@ -24,12 +24,12 @@ if (post.categories && post.categories.data.length > 0) {
     pf.push('By ' + post.author)
   }
   if(updated) {
-    pf.push('Updated on' + date(post.updated, 'YY/MM/DD'));
+    pf.push('Updated on ' + date(post.updated, 'YY/MM/DD'));
   }
   if(tags || categories) {
     var tc = 'Posted';
   }
-  if (post.categories.data.length > 0) {
+  if (categories && post.categories.data.length > 0) {
     if (post.categories.data.length > 1) {
       tc += ' in categories '
     } else {
@@ -40,7 +40,7 @@ if (post.categories && post.categories.data.length > 0) {
       tc += '<a href="' + url_for(cate.path) + '">' + cate.name + '</a>';
     }
   }
-  if (post.tags.data.length > 0) {
+  if (tags && post.tags.data.length > 0) {
     if (post.tags.data.length > 1) {
       tc += ' with tags ';
     } else {
