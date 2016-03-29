@@ -45,6 +45,8 @@ This will add **inline style** to the `<header>` element, rule mapping as below:
  * image    -> background-image    (this value can't be ommited)
  * size     -> background-size     (default to "cover")
  * position -> background-position (default to "center")
+ * color    -> background-color    (default to "#333")
+ * repeat    -> background-repeat  (default to "no-repeat")
  * height   -> height              (default to "450px")
 ```
 

@@ -13,7 +13,9 @@
   <% var bgSize = page.banner.size || 'cover'; %>
   <% var bgHeight = page.banner.height || '450px'; %>
   <% var bgPosition = page.banner.position || 'center'; %>
-<header style="background-image:url('<%= page.banner.image %>'); background-size: <%= bgSize %>; background-position: <%= bgPosition %>; height: <%= bgHeight %>;" class="with-bg">
+  <% var bgRepeat = page.banner.repeat || 'no-repeat'; %>
+  <% var bgColor = page.banner.color || '#333'; %>
+<header style="background-image:url('<%= page.banner.image %>'); background-size: <%= bgSize %>; background-position: <%= bgPosition %>; background-repeat: <%= bgRepeat %>; background-color: <%= bgColor %>; height: <%= bgHeight %>;" class="with-bg">
 <% } else { %>
 <header>
 <% } %>
