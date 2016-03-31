@@ -102,7 +102,15 @@ header {
   hr {
     border: none;
     height: 0;
-    border-top: 1px solid #ddd;
+    &:before {
+      content: '* * *';
+      font-size: 2em;
+      margin: 50px auto;
+      text-align: center;
+      color: #4c6dd1;
+      display: block;
+    }
+    //border-top: 1px solid #ddd;
   }
   dl { // definition list
     dt {
@@ -129,7 +137,6 @@ header {
       border-bottom: 2px solid #999;
     }
     td {
-      border-bottom: 1px solid #ccc;
       padding: 10px 0;
     }
   }
@@ -201,6 +208,11 @@ header {
   .post-title {
     font-size: 1.9em;
   }
+}
+
+.post-content a {
+  color: #4c6dd1;
+  text-decoration: none;
 }
 
 .post {
