@@ -10,6 +10,9 @@ post_nav: true
 ## show toc
 # toc: true
 
+## string used before posts list in index page
+# post_list_name: Posts
+
 ## enable disqus powered comment system
 # disqus_shortname: terminal-ninja
 
