@@ -42,7 +42,7 @@
 
   var toc = $('.toc');
   var tocAnchor = $('.post-content');
-  if (toc) {
+  if (toc && toc.clientHeight < window.innerHeight) {
     stickToc();
     updateChain.push(stickToc);
   }
