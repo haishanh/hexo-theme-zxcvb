@@ -1,0 +1,10 @@
+extends _partial/layout
+
+block title
+  title= page.title + ' | ' + config.title
+
+block section
+  include _partial/post-main
+
+block footer
+  include _partial/footer

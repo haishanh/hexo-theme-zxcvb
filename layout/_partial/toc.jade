@@ -1,0 +1,10 @@
+- if (theme.toc)
+  - var toc_enabled = page.toc !== false
+- else
+  - var toc_enabled = page.toc === true
+
+- if(toc_enabled)
+  - var tocContent = toc(page.content, {class:'toc', list_number: false})
+  .side.toc
+    .toc-title In this page
+    #{tocContent}

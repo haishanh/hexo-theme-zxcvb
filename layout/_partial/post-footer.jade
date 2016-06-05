@@ -1,0 +1,57 @@
+-
+  var updated = false;
+  var tags = false;
+  var categories = false;
+  var author = false;
+  if (page.updated) {
+    updated = page.updated;
+  }
+  if (page.author) {
+    author = page.author;
+  }
+  if (page.tags && page.tags.data.length > 0) {
+    tags = page.tags;
+  }
+  if (page.categories && page.categories.data.length > 0) {
+    categories = page.categories;
+  }
+
+- if(updated || tags || categories || author)
+  -
+    var pf = [];
+    if(author) {
+      pf.push('By ' + page.author);
+    }
+    if(updated) {
+      pf.push('Updated on ' + date(page.updated, 'YY/MM/DD'));
+    }
+    if(tags || categories) {
+      var tc = 'Posted';
+    }
+    if (categories && page.categories.data.length > 0) {
+      if (page.categories.data.length > 1) {
+        tc += ' in categories '
+      } else {
+        tc += ' in category '
+      }
+      for(var i=0; i<page.categories.data.length; i++) {
+        var cate = page.categories.data[i];
+        tc += '<a href="' + url_for(cate.path) + '">' + cate.name + '</a>';
+      }
+    }
+    if (tags && page.tags.data.length > 0) {
+      if (page.tags.data.length > 1) {
+        tc += ' with tags ';
+      } else {
+        tc += ' with tag ';
+      }
+      for(var i=0; i<page.tags.data.length; i++) {
+        var tag = page.tags.data[i];
+        tc += '#<a href="' + url_for(tag.path) + '">' + tag.name + '</a> ';
+      }
+    }
+    if(tags || categories) {
+      pf.push(tc)
+    }
+
+  .post-footer!= pf.join(', ')

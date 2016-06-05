@@ -1,0 +1,15 @@
+- if ((theme.disqus_shortname && page.comments) || theme.source_repo)
+  .post-buttons
+
+    - if (theme.disqus_shortname && page.comments)
+      a(
+        href="#0",
+        id="comments-trigger"
+      ) Comments
+
+    - if (theme.source_repo)
+      - var link_prefix = theme.source_repo.match(/\/$/) ? theme.source_repo : theme.source_repo + '/';
+      a(
+        href=link_prefix + page.source,
+        target="_blank"
+      ) Source

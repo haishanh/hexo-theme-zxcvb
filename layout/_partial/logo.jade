@@ -1,0 +1,24 @@
+- if (theme.log)
+  - if (theme.log.image)
+
+    a(
+      href=theme.root,
+      class="site-title"
+    )
+      img(src=theme.logo.image)
+
+  - else if (theme.log.text)
+
+    a(
+      href=theme.root,
+      class="site-title"
+    )
+      code!= theme.log.text
+
+- else
+
+  a(
+    href=theme.root,
+    class="site-title"
+  )
+    code $_

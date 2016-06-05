@@ -1,0 +1,25 @@
+section.main.index
+  .wrapper
+    - var postListName = theme.post_list_name || 'Posts';
+    h2= postListName
+
+    ul.post-list
+
+      - page.posts.each(function (post) {
+
+        li.post-item
+
+          +post-meta(post)
+
+          +post-title(post)
+
+      - })
+
+
+    -
+      var pagi = paginator({
+        base: theme.root,
+        prev_text: '&laquo; Prev',
+        next_text: 'Next &raquo;'
+      });
+    .paginator!= pagi

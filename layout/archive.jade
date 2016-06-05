@@ -1,0 +1,12 @@
+include _mixins/post-title
+
+extends _partial/layout
+
+block title
+  title= 'Archive | ' + config.title
+
+block section
+  include _partial/archive-main
+
+block footer
+  include _partial/footer

@@ -1,0 +1,72 @@
+mixin header-main
+  .wrapper.clearfix
+    include logo
+
+    - if (theme.menu)
+
+      .menu
+        span.hamburger
+          span
+      nav(
+        role="navigation",
+        class="nav"
+      )
+        - for (var i in theme.menu)
+          a(
+            href=theme.menu[i]
+          )= i
+
+
+
+doctype html
+html
+  head
+    block title
+    //- title= config.title
+    meta(charset="utf-8")
+    meta(
+      name="viewport",
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    )
+    link(
+      rel="alternate",
+      href="atom.xml",
+      type="application/atom+xml"
+    )
+    link(
+      rel="icon",
+      href=theme.root + "favicon.ico"
+    )
+    link(
+      rel="stylesheet",
+      href="/css/main.css",
+      type="text/css"
+    )
+  body
+
+    - if (page.banner)
+
+      - var bgSize = page.banner.size || 'cover';
+      - var bgHeight = page.banner.height || '450px';
+      - var bgPosition = page.banner.position || 'center';
+      - var bgRepeat = page.banner.repeat || 'no-repeat';
+      - var bgColor = page.banner.color || '#333';
+      -
+        var inStyle = {
+          height: bgHeight,
+          'background-image': 'url(' + page.banner.image + ')',
+          'background-size': bgSize,
+          'background-position': bgPosition,
+          'background-repeat': bgRepeat,
+          'background-color': bgColor
+        }
+
+      header.with-bg(style=inStyle)
+        +header-main
+
+    - else
+      header
+        +header-main
+
+    block section
+    block footer

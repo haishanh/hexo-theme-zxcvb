@@ -1,0 +1,13 @@
+include _mixins/post-title
+
+extends _partial/layout
+//- include _partial/header
+
+block title
+  title= config.title
+
+block section
+  include _partial/index-main
+
+block footer
+  include _partial/footer
