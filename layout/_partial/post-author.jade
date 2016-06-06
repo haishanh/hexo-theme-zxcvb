@@ -8,11 +8,16 @@
 
   authorsArr.forEach(function (el) {
     if(theme.authors[el]) {
-      authors.push(theme.authors[el]);
+      authors.push(
+        Object.assign({
+          link: theme.authors[el].avatar
+        }, theme.authors[el])
+      );
     } else {
       authors.push({
         name: el,
-        avatar: 'https://avatars0.githubusercontent.com/u/583231?v=3'
+        avatar: 'https://avatars0.githubusercontent.com/u/583231?v=3',
+        link: 'https://avatars0.githubusercontent.com/u/583231?v=3'
       });
     }
   });
@@ -22,9 +27,7 @@
 - if (authors.length > 0)
   .post-author
     - authors.forEach(function (author) {
-
-      img(
-        src=author.avatar
-      )= author.name
-
+      a(href=author.link)
+        img(src=author.avatar, alt=author.name)
+        .tip= author.name
     - });
