@@ -34,6 +34,9 @@ header {
   height: $header-height;
   background: $header-color;
   .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     @media screen and (min-width: ($break-point - 1px)) {
     //@include media(">#{$break-point}") {
       margin: 0 auto;
