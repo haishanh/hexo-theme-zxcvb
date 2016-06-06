@@ -1,3 +1,4 @@
+
 section.main.archive
   .wrapper
     - var last = 0;
@@ -19,3 +20,10 @@ section.main.archive
     //- we still need to dump it
     - if (store.length > 0)
       +posts_in_a_year(last, store)
+
+    -
+      var pagi = paginator({
+        prev_text: '&laquo; Prev',
+        next_text: 'Next &raquo;'
+      });
+    .paginator!= pagi
