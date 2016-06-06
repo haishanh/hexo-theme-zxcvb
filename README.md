@@ -56,6 +56,20 @@ If TOC is enabled, a TOC block is displayed besides the post itself **if the scr
 
 TOC is turned off by default. To enable TOC, add `toc: true` in your `_config.yml`. In this situation, every post page will contain a TOC. But you can turn it off for a individual post by explicitly set `toc: false` in the frontmatter. If TOC is not turned on in `_config.yml`, you still can enable TOC for a individual post by explicitly set `toc: true` in the frontmatter.
 
+#### authors avatar
+
+in `_config.yml`:
+
+```yaml
+authors:
+  haishanh:
+    name: Haishan
+    avatar: https://avatars0.githubusercontent.com/u/1166872?v=3
+  octocat:
+    name: The Octocat
+    avatar: https://avatars0.githubusercontent.com/u/583231?v=3
+```
+
 ### Customization
 
 Install requirements first.

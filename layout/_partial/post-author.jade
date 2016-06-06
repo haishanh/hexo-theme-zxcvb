@@ -1,0 +1,30 @@
+-
+  var authorsArr = page.author || page.authors || [];
+  var authors = [];
+
+  if (!Array.isArray(authorsArr)) {
+    authorsArr = [authorsArr]
+  }
+
+  authorsArr.forEach(function (el) {
+    if(theme.authors[el]) {
+      authors.push(theme.authors[el]);
+    } else {
+      authors.push({
+        name: el,
+        avatar: 'https://avatars0.githubusercontent.com/u/583231?v=3'
+      });
+    }
+  });
+
+
+//-
+- if (authors.length > 0)
+  .post-author
+    - authors.forEach(function (author) {
+
+      img(
+        src=author.avatar
+      )= author.name
+
+    - });
