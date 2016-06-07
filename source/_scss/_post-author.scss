@@ -6,11 +6,53 @@
   border-top: 1px solid #e8e8e8;
   a {
     flex: 0 1 50px;
-    padding: 5px;
+    max-height: 50px;
+    margin: 5px;
+    // position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
   }
   img {
     margin: 0;
     border-radius: 50%;
     max-width: 100%;
   }
+  .tooltip {
+    background: #333;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    z-index: 1;
+    display: none;
+    // position: absolute;
+    // bottom: -20px;
+    // left: 10px;
+  }
+  .tooltip-arrow {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #333;
+    width: 0;
+    height: 0;
+    margin-top: 3px;
+    z-index: 1;
+    display: none;
+  }
+  a:hover {
+    .tooltip, .tooltip-arrow {
+      display: inline;
+    }
+  }
+    // &:before {
+    //   content: " ";
+    //   position: absolute;
+    //   border-left: 10px solid transparent;
+    //   border-right: 10px solid transparent;
+    //   border-bottom: 10px solid #333;
+    //   width: 0;
+    //   height: 0;
+    //   top: -10px;
+    //   left: 20px;
+    // }
 }
