@@ -26,11 +26,9 @@
 //-
 - if (authors.length > 0)
   .post-author
-    - var i = 0;
-    - while (i++ < 20 )
-      - authors.forEach(function (author) {
-        a(href=author.link)
-          img(src=author.avatar, alt=author.name)
-          span.tooltip-arrow
-          span.tooltip= author.name
-      - });
+    - authors.forEach(function (author) {
+      a(href=author.link)
+        img(src=author.avatar, alt=author.name)
+        span.tooltip-arrow
+        span.tooltip= author.name
+    - });

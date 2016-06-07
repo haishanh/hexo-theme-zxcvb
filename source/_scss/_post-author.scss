@@ -1,13 +1,17 @@
 .post-author {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  text-align: center;
   padding: 20px 10px;
+  margin-top: 20px;
   border-top: 1px solid #e8e8e8;
   a {
-    flex: 0 1 50px;
+    // flex: 0 1 50px;
     max-height: 50px;
+    max-width: 50px;
     margin: 5px;
+    text-decoration: none;
     // position: relative;
     display: inline-flex;
     flex-direction: column;
@@ -17,13 +21,17 @@
     margin: 0;
     border-radius: 50%;
     max-width: 100%;
+    flex-shrink: 0;
   }
   .tooltip {
     background: #333;
     color: white;
+    padding: 4px 8px;
+    box-sizing: content-box; // weird, this is needed
     font-size: 0.8rem;
     border-radius: 3px;
     z-index: 1;
+    flex-shrink: 0;
     display: none;
     // position: absolute;
     // bottom: -20px;
@@ -44,15 +52,4 @@
       display: inline;
     }
   }
-    // &:before {
-    //   content: " ";
-    //   position: absolute;
-    //   border-left: 10px solid transparent;
-    //   border-right: 10px solid transparent;
-    //   border-bottom: 10px solid #333;
-    //   width: 0;
-    //   height: 0;
-    //   top: -10px;
-    //   left: 20px;
-    // }
 }
