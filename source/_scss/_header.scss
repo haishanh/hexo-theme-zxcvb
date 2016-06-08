@@ -5,6 +5,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 50px;
     @media screen and (min-width: ($break-point - 1px)) {
     //@include media(">#{$break-point}") {
       margin: 0 auto;
@@ -13,6 +14,9 @@ header {
     @media screen and (max-width: $break-point) {
     //@include media("<=#{$break-point}") {
       margin: 0 $margin-side 0;
+      .menu {
+        order: 1;
+      }
     }
     .menu {
       $burger-height: 20px;
@@ -26,7 +30,6 @@ header {
     color: #ecf0f1; //cloud
     text-decoration: none;
     display: inline-block;
-    margin-top: ($header-height - 40px) / 2;
     code {
       font-size: 25px;
     }

@@ -5,11 +5,6 @@
   // padding-top + padding-bottom + line-height + border-bottom
   $a-actual-height: 2 * $a-padding-top-bottom + $a-line-height + 1px;
 
-  float: right;
-  display: block;
-  // background: #333;
-  // background: rgba(0,0,0,0.8);
-  padding: ($header-height - $a-line-height)/2 10px;
   a {
     padding: $a-padding-top-bottom 10px;
     border-radius: 5px;
