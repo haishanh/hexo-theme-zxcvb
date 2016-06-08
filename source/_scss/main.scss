@@ -11,19 +11,4 @@
 @import 'footer';
 @import 'highlight';
 @import "highlight-theme";
-
-// main
-.main {
-  border-bottom: 1px solid #e8e8e8;
-  .wrapper {
-    @media screen and (min-width: ($break-point - 1px)) {
-    //@include media(">#{$break-point}") {
-      margin: 0 auto 25px;
-      width: $main-width;
-    }
-    @media screen and (max-width: $break-point) {
-    //@include media("<=#{$break-point}") {
-      margin: 0 $margin-side 25px;
-    }
-  }
-}
+@import "main-section";

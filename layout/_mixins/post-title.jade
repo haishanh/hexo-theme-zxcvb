@@ -17,11 +17,9 @@ mixin post-title(post)
         ) No Title
 
 mixin post-meta(post)
-  - if (theme.time_meta === false)
-    p time_meta is false
-  - else
+  - if (theme.time_meta !== false && post.time_meta !== false)
     - var time = date(post.date, 'MMMM D, YYYY');
-    span.post-meta= time
+    time(datetime=date_xml(post.date))= time
 
 mixin posts_in_a_year(year, posts)
   h2

@@ -1,19 +1,9 @@
 section.main.post
   .wrapper.clearfix
     .post-header
-      h1.post-title
-        - if(page.link)
-          a(
-            href=url_for(page.link),
-            target='_blank',
-          )= page.title
-        - else
-          a(
-            href=url_for(page.path)
-          )= page.title
+      +post-title(page)
+      +post-meta(page)
 
-      - if(theme.time_meta !== false && page.time_meta !== false)
-        span.post-meta= date(page.date, 'MMMM D, YYYY')
     include toc
     .post-content!= page.content
     include post-footer
