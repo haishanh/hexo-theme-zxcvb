@@ -1,7 +1,7 @@
 - if (page.comments && theme.disqus_shortname)
   #disqus_thread
   script.
-    var disqus_shortname = '<%- theme.disqus_shortname %>';
+    var disqus_shortname = '#{theme.disqus_shortname}';
 
     function load_disqus() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
