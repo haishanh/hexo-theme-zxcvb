@@ -1,0 +1,18 @@
+.post-buttons {
+  margin: 40px auto;
+  text-align: center;
+  // post-footer button
+  a {
+    text-decoration: none;
+    color: #999;
+    border: 1px solid #fff;
+    border-color: #999;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    &:hover {
+      color: #3498db;
+      border: 1px solid #3498db;
+    }
+  }
+}

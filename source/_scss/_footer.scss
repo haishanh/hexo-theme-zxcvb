@@ -1,0 +1,24 @@
+footer {
+  @media screen and (min-width: ($break-point - 1px)) {
+  //@include media (">#{$break-point}") {
+    width: $main-width;
+  }
+  @media screen and (max-width: $break-point) {
+  //@include media ("<=#{$break-point}") {
+    margin: 0 $margin-side;
+  }
+  margin: 0 auto;
+  color: #777;
+  .additional {
+    margin: 0 auto;
+    padding: 20px 0;
+    color: #aaa;
+    font-size: 0.8em;
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: #aaa;
+      font-weight: bold;
+    }
+  }
+}

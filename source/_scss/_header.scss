@@ -1,0 +1,51 @@
+header {
+  height: $header-height;
+  background: $header-color;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (min-width: ($break-point - 1px)) {
+    //@include media(">#{$break-point}") {
+      margin: 0 auto;
+      width: $main-width;
+    }
+    @media screen and (max-width: $break-point) {
+    //@include media("<=#{$break-point}") {
+      margin: 0 $margin-side 0;
+    }
+    .menu {
+      $burger-height: 20px;
+      float: right;
+      padding: ($header-height - $burger-height)/2 0;
+      @import "hamburger";
+    }
+    @import "header-nav";
+  }
+  .site-title {
+    color: #ecf0f1; //cloud
+    text-decoration: none;
+    display: inline-block;
+    margin-top: ($header-height - 40px) / 2;
+    code {
+      font-size: 25px;
+    }
+    img {
+      width: 40px;
+    }
+    &:hover {
+      color: #10ff04;
+      text-decoration: none;
+    }
+  }
+  &.with-bg {
+    .wrapper .nav {
+      background: none;
+      @media screen and (max-width: $break-point) {
+        a {
+          border-bottom: 1px solid #f0f0f0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+li {
+  line-height: 1.8em;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+// special hr
+hr {
+  border: none;
+  height: 0;
+  &:before {
+    content: '* * *';
+    font-size: 2em;
+    margin: 50px auto;
+    text-align: center;
+    color: #4c6dd1;
+    display: block;
+  }
+}
+
+code {
+  border-radius: 3px;
+  background: #f1f1f1;
+  padding: 0.2em 0;
+  margin: 0 4px;
+  font-size: 85%;
+  &:before, &:after {
+    content: "\00a0";
+    letter-spacing: -0.2em;
+  }
+}
+
+dl { // definition list
+  dt {
+    margin-left: 2em;
+    font-weight: bold;
+  }
+  dd {
+    margin-left: 2em;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 1em 0;
+  width: 100%;
+  td,
+  th {
+    text-align: left;
+    vertical-align: middle;
+  }
+  th {
+    font-weight: bold;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #999;
+  }
+  td {
+    padding: 10px 0;
+  }
+}

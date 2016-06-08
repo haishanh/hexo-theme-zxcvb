@@ -1,0 +1,60 @@
+@import 'post-title';
+@import 'post-content';
+@import 'post-footer';
+@import "post-author";
+@import 'post-button';
+@import 'post-nav';
+
+.post {
+  .post-header {
+    text-align: center;
+    margin: 1.5em auto;
+  }
+
+  .post-title {
+    margin-top: 15px;
+  }
+
+  blockquote {
+    margin: 0;
+    margin-left: 15px;
+    border-left: 3px solid #ccc;
+    padding: 10px 0px 10px 15px;
+    p {
+      margin: 0
+    }
+    footer {
+      margin-top: 10px;
+      cite {
+        &:before {
+          content: " - ";
+        }
+      }
+    }
+  }
+}
+
+.post-content a {
+  color: #4c6dd1;
+}
+
+.post-meta {
+  color: #777;
+  font-size: 0.8em;
+}
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  .post-item {
+    margin: 15px auto;
+  }
+}
+
+.index,
+.archive {
+  .post-title {
+    font-size: 1.9em;
+  }
+}

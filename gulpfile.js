@@ -4,7 +4,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 
-const sassSrc = 'source/_scss/*.scss';
+const sassSrc = 'source/_scss/**/*.scss';
 
 gulp.task('sass', function () {
   return gulp.src(sassSrc)

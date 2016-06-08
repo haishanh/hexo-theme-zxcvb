@@ -1,0 +1,37 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+   content: ".";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+body {
+  font-family: $font_base;
+  color: #55565f;
+}
+
+code, pre {
+  font-family: $font_mono;
+  font-size: 0.8em;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: calc(100% + #{$margin-side}* 2);
+  display: block;
+  margin:0 (-$margin-side);
+  &.xs, &.small {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

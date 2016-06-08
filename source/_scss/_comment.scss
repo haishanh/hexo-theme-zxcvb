@@ -1,0 +1,10 @@
+#disqus_thread {
+  &.hide {
+    display: none;
+  }
+  iframe {
+    height: 327px;
+    height: auto !important;
+    min-height: 327px;
+  }
+}

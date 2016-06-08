@@ -1,0 +1,39 @@
+.post-nav {
+  position: relative;
+  height: 20px;
+  a {
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-size: 0.8em;
+    font-weight: 200;
+    color: #555;
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 0.4;
+    }
+    // nav icon
+    .icon {
+      height: 24px;
+      width: 24px;
+      margin-bottom: -7px;
+      fill: #555;
+    }
+  }
+  .nav {
+    position: absolute;
+    @media screen and (min-width: 1100px) {
+      position: fixed;
+    }
+    &.stop {
+      position: absolute;
+    }
+  }
+  .prev {
+    left: 20px;
+    bottom: 20px;
+  }
+  .next {
+    right: 20px;
+    bottom: 20px;
+  }
+}

@@ -1,0 +1,27 @@
+.paginator {
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+  a {
+    text-decoration: none;
+    &:hover {
+      color: #e74c3c;
+    }
+  }
+  .page-number {
+    margin: 0 5px;
+    padding: 2px 3px;
+    &.current {
+      background: #eee;
+      color: black;
+    }
+  }
+  .extend {
+    &.next {
+      float: right;
+    }
+    &.prev {
+      float: left;
+    }
+  }
+}

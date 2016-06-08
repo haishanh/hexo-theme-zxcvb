@@ -1,0 +1,21 @@
+.post-title {
+  margin: 10px auto 5px;
+  color: #4c6dd1;
+  font-weight: 200;
+  font-size: 2.5em;
+  a {
+    text-decoration: none;
+    &:link, &:visited {
+      color: #4c6dd1;
+    }
+    &:hover {
+      color: #e74c3c;
+    }
+    &[target=_blank] {
+      // for link post
+      &:after {
+        content: "\2192";
+      }
+    }
+  }
+}
