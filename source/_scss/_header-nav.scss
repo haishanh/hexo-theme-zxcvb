@@ -28,24 +28,21 @@
     position: absolute;
     background: $header-color;
     width: 100%;
-    padding: 20px 10px;
-    visibility: hidden;
+    padding: 0;
     left: 0;
     top: 50px;
-    height: 0px;
+    max-height: 0px;
     overflow: hidden;
-    transition: height 0.35s ease;
+    transition: all 0.35s ease-in-out; // max-height and padding
     a {
       display: block;
       border-bottom: 1px solid lighten($header-color, 40%);
-      //border-bottom: 1px solid #717171;
       border-radius: 0;
     }
     &.toggle {
-      visibility: visible;
       padding: 20px 10px;
       // a little hack to make it animate
-      height: $a-actual-height * $menu-num + 20px * 2;
+      max-height: $a-actual-height * $menu-num + 20px * 2;
     }
   }
 }
