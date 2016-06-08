@@ -22,16 +22,16 @@ theme: zxcvb
 
 ### Features
 
-#### Post banner
+#### Post hero
 
-Add the following config in the front matter of your post to get a stunning edge to edge banner picture.
+Add the following config in the front matter of your post to get a stunning edge to edge banner picture(hero).
 
 ```text
 ---
 title: Test post
 date: 2016-02-23
 updated: 2016-02-29
-banner:
+hero:
   image: http://7fva40.com1.z0.glb.clouddn.com/carlog-404-sprite.jpg
   size: cover
   position: center
@@ -48,6 +48,20 @@ This will add **inline style** to the `<header>` element, rule mapping as below:
  * color    -> background-color    (default to "#333")
  * repeat   -> background-repeat  (default to "no-repeat")
  * height   -> height              (default to "450px")
+```
+
+#### Site level hero
+
+The hero configration can also be added in `_config.yml` to config it as site level.
+
+You can use an array, but only the **last one** will be used.
+
+```text
+hero:
+  - image: http://7fva40.com1.z0.glb.clouddn.com/wheatfield-under-thunderclouds.jpg
+    height: 350px
+  - image: http://7fva40.com1.z0.glb.clouddn.com/starry-night.jpg
+    height: 150px
 ```
 
 #### Table of content(TOC)

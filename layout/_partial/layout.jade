@@ -43,18 +43,30 @@ html
       type="text/css"
     )
   body
+    -
+      var hero;
+      if (theme.hero) {
+        // var rand = Math.floor(Math.random() * theme.heros.length);
+        if (Array.isArray(theme.hero)) {
+          hero = theme.hero[theme.hero.length - 1];
+        } else {
+          hero = theme.hero;
+        }
+      }
 
-    - if (page.banner)
+      hero = page.banner || page.hero || hero;
 
-      - var bgSize = page.banner.size || 'cover';
-      - var bgHeight = page.banner.height || '450px';
-      - var bgPosition = page.banner.position || 'center';
-      - var bgRepeat = page.banner.repeat || 'no-repeat';
-      - var bgColor = page.banner.color || '#333';
+    - if (hero)
       -
+        var bgSize = hero.size || 'cover';
+        var bgHeight = hero.height || '450px';
+        var bgPosition = hero.position || 'center';
+        var bgRepeat = hero.repeat || 'no-repeat';
+        var bgColor = hero.color || '#333';
+
         var inStyle = {
           height: bgHeight,
-          'background-image': 'url(' + page.banner.image + ')',
+          'background-image': 'url(' + hero.image + ')',
           'background-size': bgSize,
           'background-position': bgPosition,
           'background-repeat': bgRepeat,
