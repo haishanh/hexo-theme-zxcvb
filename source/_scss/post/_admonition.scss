@@ -31,4 +31,13 @@
     $base-alizarin: #e74c3c;
     @include admon-color($base-alizarin);
   }
+  // other stuff in an admonition
+  code, pre {
+    background: #eee;
+    background: rgba(255,255,255, 0.3);
+  }
+
+  pre {
+    padding: 5px;
+  }
 }
