@@ -1,5 +1,5 @@
-- if (theme.log)
-  - if (theme.log.image)
+- if (theme.logo)
+  - if (theme.logo.image)
 
     a(
       href=theme.root,
@@ -7,13 +7,13 @@
     )
       img(src=theme.logo.image)
 
-  - else if (theme.log.text)
+  - else if (theme.logo.text)
 
     a(
       href=theme.root,
       class="site-title"
     )
-      code!= theme.log.text
+      code!= theme.logo.text
 
 - else
 
