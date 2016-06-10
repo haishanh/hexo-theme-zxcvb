@@ -15,11 +15,11 @@ section.main.index
 
       - })
 
-
-    -
-      var pagi = paginator({
-        base: theme.root,
-        prev_text: '&laquo; Prev',
-        next_text: 'Next &raquo;'
-      });
-    .paginator!= pagi
+    - if (theme.per_page > 0)
+      -
+        var pagi = paginator({
+          base: theme.root,
+          prev_text: '&laquo; Prev',
+          next_text: 'Next &raquo;'
+        });
+      .paginator!= pagi
