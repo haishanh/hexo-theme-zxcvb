@@ -22,7 +22,7 @@ mixin post-meta(post)
     time(datetime=date_xml(post.date))= time
 
 mixin posts_in_a_year(year, posts)
-  h2
+  h2.post-list-title
     a(
       href=url_for(config.archive_dir + '/' + year)
     )= year

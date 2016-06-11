@@ -9,4 +9,15 @@
   time {
     color: #808080;
   }
+  .post-list-title {
+    color: #555;
+    font-size: 2em;
+    font-weight: 300;
+    a {
+      color: #555;
+      &:hover {
+        color: $link-hover-red;
+      }
+    }
+  }
 }
