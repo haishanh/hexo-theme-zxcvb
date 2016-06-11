@@ -3,7 +3,7 @@
   $a-line-height: 20px;
   $a-padding-top-bottom: 10px;
   // padding-top + padding-bottom + line-height + border-bottom
-  $a-actual-height: 2 * $a-padding-top-bottom + $a-line-height + 1px;
+  $a-actual-height: 2 * $a-padding-top-bottom + $a-line-height + 1px + $header-height;
 
   a {
     padding: $a-padding-top-bottom 10px;
@@ -19,13 +19,12 @@
   }
   @media screen and (max-width: $break-point) {
     z-index: 1;
-    float: none;
     position: absolute;
     background: $header-color;
     width: 100%;
     padding: 0;
     left: 0;
-    top: 50px;
+    top: 0;
     max-height: 0px;
     overflow: hidden;
     transition: all 0.35s ease-in-out; // max-height and padding
@@ -35,7 +34,7 @@
       border-radius: 0;
     }
     &.toggle {
-      padding: 20px 10px;
+      padding: (20px + $header-height) 10px 20px;
       // a little hack to make it animate
       max-height: $a-actual-height * $menu-num + 20px * 2;
     }

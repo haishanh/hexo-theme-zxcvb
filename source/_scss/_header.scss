@@ -5,24 +5,20 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
-    @media screen and (min-width: ($break-point - 1px)) {
-    //@include media(">#{$break-point}") {
-      margin: 0 auto;
-      width: $main-width;
+    height: $header-height;
+    padding: 0 $side-padding;
+    max-width: $main-width;
+    margin: 0 auto;
+    .menu {
+      $burger-height: 20px;
+      z-index: 2;
+      padding: ($header-height - $burger-height)/2 0;
+      @import "hamburger";
     }
     @media screen and (max-width: $break-point) {
-    //@include media("<=#{$break-point}") {
-      margin: 0 $margin-side 0;
       .menu {
         order: 1;
       }
-    }
-    .menu {
-      $burger-height: 20px;
-      float: right;
-      padding: ($header-height - $burger-height)/2 0;
-      @import "hamburger";
     }
     @import "header-nav";
   }
@@ -30,6 +26,7 @@ header {
     color: #ecf0f1; //cloud
     text-decoration: none;
     display: inline-block;
+    z-index: 2;
     code {
       font-size: 25px;
     }
@@ -39,16 +36,6 @@ header {
     &:hover {
       color: #10ff04;
       text-decoration: none;
-    }
-  }
-  &.with-bg {
-    .wrapper .nav {
-      background: none;
-      @media screen and (max-width: $break-point) {
-        a {
-          border-bottom: 1px solid #f0f0f0;
-        }
-      }
     }
   }
 }

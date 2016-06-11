@@ -1,13 +1,7 @@
 footer {
-  @media screen and (min-width: ($break-point - 1px)) {
-  //@include media (">#{$break-point}") {
-    width: $main-width;
-  }
-  @media screen and (max-width: $break-point) {
-  //@include media ("<=#{$break-point}") {
-    margin: 0 $margin-side;
-  }
+  max-width: $main-width;
   margin: 0 auto;
+  padding: 0 $side-padding;
   color: #777;
   .additional {
     margin: 0 auto;
