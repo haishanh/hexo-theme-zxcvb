@@ -3,6 +3,10 @@ footer {
   margin: 0 auto;
   padding: 0 $side-padding;
   color: #777;
+  a {
+    color: #777;
+    font-weight: bold;
+  }
   .additional {
     margin: 0 auto;
     padding: 20px 0;
@@ -10,9 +14,7 @@ footer {
     font-size: 0.8em;
     text-align: center;
     a {
-      text-decoration: none;
       color: #aaa;
-      font-weight: bold;
     }
   }
 }
