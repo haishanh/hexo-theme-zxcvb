@@ -3,6 +3,7 @@
     <img src="https://github.com/haishanh/hexo-theme-zxcvb/blob/master/_assets/zxcvb-black.png">
   </a>
   <p align="center">A <a href="https://hexo.io">hexo</a> theme</p>
+  <p align="center"><a href="http://zxcvb.hanhaishan.com/">== DEMO ==</a></p>
 </p>
 
 ### Usage
