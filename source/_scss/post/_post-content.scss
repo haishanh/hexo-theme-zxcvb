@@ -1,8 +1,4 @@
 .post-content {
-  @media screen and (min-width: ($break-point - 1px)) {
-  // @include media(">#{$break-point}") {
-    width: $main-width;
-  }
   a:hover {
     background: #555;
     border-radius: 3px;
